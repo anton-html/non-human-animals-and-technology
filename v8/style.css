@@ -30,16 +30,20 @@ body, html {
 
 @media (max-width: 768px) {
     .container {
-        flex-direction: column; /* Перестраиваем блоки вертикально */
-        padding: 10px; /* Уменьшаем внешние отступы */
+        flex-direction: column-reverse;
     }
 
     .left, .right {
-        width: 100%; /* Ширина на 100% экрана */
-        padding: 10px; /* Внутренний отступ */
+        width: 100%;
+        height: auto;
     }
 
-    .third {
-        width: 100%; /* Контент третьего блока также на всю ширину */
+    .info-blocks {
+        flex-direction: column;
+    }
+
+    .right img {
+        max-width: 100%;
+        height: auto;
     }
 }
