@@ -37,15 +37,10 @@ body, html {
         flex-direction: column-reverse;
     }
 
-    .left, .right {
+    .left, .right, .third {
         width: 100%;
         padding: 10px;
     }
-
-    .info-blocks {
-        flex-direction: column;
-    }
-
     .right img {
         max-width: 100%;
         height: auto;
