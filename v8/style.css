@@ -32,11 +32,11 @@ body, html {
 }
 
 .third {
-    padding: 40px 20px;
+    padding: 20px 20px;
     text-align: left;
 }
 
-/* Адаптация для мобильных устройств */
+/* Мобилка */
 
 @media (max-width: 768px) {
     .container {
