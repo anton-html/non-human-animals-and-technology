@@ -10,7 +10,7 @@ body, html {
 
 .container {
     display: flex;
-    height: 70vh;
+    height: 70vh; /* Уменьшаем высоту для размещения третьего контейнера */
 }
 
 .left, .right {
@@ -37,10 +37,10 @@ body, html {
 .third {
     background-color: #ffffff;
     padding: 40px 20px;
-    text-align: center;
+    text-align: left; /* Выравнивание по левому краю */
 }
 
-/* Мобилка */
+/* Адаптация для мобильных устройств */
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
