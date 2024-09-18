@@ -7,8 +7,6 @@
 body, html {
     height: 100%;
     font-family: serif; 
-    font-size: 16px; 
-    line-height: 1.5; 
 }
 
 .container {
@@ -34,25 +32,6 @@ body, html {
 .third {
     padding: 20px;
     text-align: left;
-}
-
-
-h1, h2, h3, h4, h5, h6 {
-    margin: 1em 0; 
-    font-family: serif; 
-}
-
-p {
-    margin: 1em 0; 
-}
-
-ul, ol {
-    margin: 1em 0; 
-    padding-left: 2em; 
-}
-
-li {
-    margin: 0.5em 0; 
 }
 
 /* Мобилка */
