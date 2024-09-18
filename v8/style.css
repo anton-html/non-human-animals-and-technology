@@ -1,20 +1,15 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; /* Включает отступы и границы в общую ширину элемента */
+    box-sizing: border-box;
 }
 
 body, html {
     height: 100%;
-    font-family: serif; /* Используем стандартный шрифт по умолчанию, например, serif */
-    font-size: 16px;
-    line-height: 1;
 }
 
 .container {
     display: flex;
     width: 100%;
-    overflow-x: hidden; /* Скрыть горизонтальную прокрутку, если она возникает */
+    overflow-x: hidden;
 }
 
 .left, .right {
@@ -36,25 +31,6 @@ body, html {
     text-align: left;
 }
 
-/* Возвращаем базовые отступы для текстовых элементов */
-h1, h2, h3, h4, h5, h6 {
-    margin: 1em 0; /* Базовые отступы для заголовков */
-    font-family: serif; /* Стандартный шрифт для заголовков */
-}
-
-p {
-    margin: 1em 0; /* Базовые отступы для параграфов */
-}
-
-ul, ol {
-    margin: 1em 0; /* Базовые отступы для списков */
-    padding-left: 1em; /* Отступ для маркеров списка */
-}
-
-li {
-    margin: 0.5em 0; /* Отступы для элементов списка */
-}
-
 /* Мобилка */
 @media (max-width: 768px) {
     .container {
@@ -63,7 +39,7 @@ li {
 
     .left, .right {
         width: 100%;
-        padding: 10px; /* Уменьшение отступов на мобильных устройствах */
+        padding: 10px;
     }
 
     .info-blocks {
