@@ -23,11 +23,11 @@ body, html {
 }
 
 .left {
-    background-color: #f0f0f0;
+    background-color: #fff;
 }
 
 .right {
-    background-color: #d9d9d9;
+    background-color: #fff;
     height: 360px; /* Фиксированная высота правого блока */
 }
 
@@ -39,7 +39,7 @@ body, html {
 }
 
 .third {
-    background-color: #b0b0b0;
+    background-color: #fff;
     padding: 40px 20px;
     text-align: left; /* Выравнивание по левому краю */
 }
