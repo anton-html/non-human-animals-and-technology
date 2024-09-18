@@ -7,8 +7,8 @@
 body, html {
     height: 100%;
     font-family: serif; /* Используем стандартный шрифт по умолчанию, например, serif */
-    font-size: 16px; /* Базовый размер шрифта */
-    line-height: 1.5; /* Стандартная высота строки для удобочитаемости */
+    font-size: 16px;
+    line-height: 1.4;
 }
 
 .container {
