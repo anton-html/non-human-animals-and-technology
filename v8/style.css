@@ -1,12 +1,11 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Убираем глобальный сброс отступов */
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif; /* Можем оставить или убрать */
 }
 
 .container {
     display: flex;
-    /* Убираем фиксированную высоту */
 }
 
 .left, .right {
@@ -15,7 +14,7 @@
     justify-content: flex-start;
     align-items: flex-start;
     padding: 20px;
-    flex-direction: column; /* Выравниваем контент вертикально */
+    flex-direction: column;
 }
 
 .right img {
@@ -27,7 +26,7 @@
 .info-blocks {
     display: flex;
     justify-content: space-between;
-    gap: 20px; /* Промежуток между блоками */
+    gap: 20px;
 }
 
 .block {
@@ -51,12 +50,12 @@
     }
 
     .info-blocks {
-        flex-direction: column; /* Перестраиваем в вертикальный порядок на мобильных */
+        flex-direction: column;
     }
 
     .right img {
         max-width: 100%;
         height: auto;
-        max-height: none; /* Убираем ограничение высоты на мобильных устройствах */
+        max-height: none;
     }
 }
