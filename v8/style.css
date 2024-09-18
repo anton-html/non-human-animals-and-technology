@@ -10,10 +10,10 @@ body, html {
 
 .container {
     display: flex;
-    height: 100vh;
+    height: 70vh;
 }
 
-.text, .image {
+.left, .right {
     width: 50%;
     display: flex;
     justify-content: center;
@@ -21,32 +21,43 @@ body, html {
     padding: 20px;
 }
 
-.text {
+.left {
     background-color: #ffffff;
 }
 
-.image {
+.right {
     background-color: #ffffff;
 }
 
-.image img {
+.right img {
     max-width: 100%;
     height: auto;
 }
 
-/* Адаптация для мобильных устройств */
+.third {
+    background-color: #ffffff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* Мобилка */
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
+        height: auto;
     }
 
     .left, .right {
         width: 100%;
-        height: 50%;
+        height: auto;
     }
 
     .right img {
         max-width: 100%;
         height: auto;
+    }
+    
+    .third {
+        padding: 20px;
     }
 }
