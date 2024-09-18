@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
 .container {
     display: flex;
     /* Убираем фиксированную высоту */
@@ -12,27 +17,36 @@
 .left, .right {
     width: 50%;
     display: flex;
-    justify-content: flex-start; /* Выравнивание контента по горизонтали */
-    align-items: flex-start; /* Выравнивание контента по верхнему краю */
+    justify-content: flex-start;
+    align-items: flex-start;
     padding: 20px;
+    flex-direction: column; /* Выравниваем контент вертикально */
 }
 
 .right img {
     max-width: 100%;
-    height: auto; /* Картинка адаптируется по высоте содержимого */
+    height: auto;
 }
 
-/* Убираем фон и оставляем настройки шрифта по умолчанию */
+.info-blocks {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Промежуток между блоками */
+}
+
+.block {
+    flex: 1;
+}
+
 .third {
     padding: 40px 20px;
-    text-align: left; /* Выравнивание по левому краю */
+    text-align: left;
 }
 
 /* Адаптация для мобильных устройств */
 @media (max-width: 768px) {
     .container {
-        flex-direction: column-reverse; /* Инвертируем порядок блоков */
-        height: auto;
+        flex-direction: column-reverse;
     }
 
     .left, .right {
@@ -40,12 +54,12 @@
         height: auto;
     }
 
+    .info-blocks {
+        flex-direction: column; /* Перестраиваем в вертикальный порядок на мобильных */
+    }
+
     .right img {
         max-width: 100%;
         height: auto;
-    }
-    
-    .third {
-        padding: 20px;
     }
 }
