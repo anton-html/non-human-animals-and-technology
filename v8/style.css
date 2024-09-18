@@ -1,7 +1,6 @@
 /* Убираем глобальный сброс отступов */
 body, html {
     height: 100%;
-    font-family: Arial, sans-serif; /* Можем оставить или убрать */
 }
 
 .container {
