@@ -19,7 +19,7 @@ body, html {
 .right img {
     max-width: 100%;
     height: auto;
-    max-height: 450px; /* Ограничение высоты изображения до 450px */
+    max-height: 640px;
 }
 
 .info-blocks {
