@@ -8,7 +8,7 @@ body, html {
     height: 100%;
     font-family: serif; /* Используем стандартный шрифт по умолчанию, например, serif */
     font-size: 16px;
-    line-height: 1.4;
+    line-height: 1;
 }
 
 .container {
@@ -48,7 +48,7 @@ p {
 
 ul, ol {
     margin: 1em 0; /* Базовые отступы для списков */
-    padding-left: 2em; /* Отступ для маркеров списка */
+    padding-left: 1em; /* Отступ для маркеров списка */
 }
 
 li {
