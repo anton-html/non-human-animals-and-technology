@@ -21,16 +21,6 @@ body, html {
     max-height: 640px;
 }
 
-.info-blocks {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-.block {
-    flex: 1;
-}
-
 .third {
     padding: 20px 20px;
     text-align: left;
@@ -55,6 +45,5 @@ body, html {
     .right img {
         max-width: 100%;
         height: auto;
-        max-height: none;
     }
 }
