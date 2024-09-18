@@ -6,6 +6,7 @@
 
 body, html {
     height: 100%;
+    font-family: Arial, sans-serif;
 }
 
 .container {
@@ -22,12 +23,12 @@ body, html {
 }
 
 .left {
-    background-color: #fff;
+    background-color: #f0f0f0;
 }
 
 .right {
-    background-color: #fff;
-    height: 500px; 
+    background-color: #d9d9d9;
+    height: 360px; /* Фиксированная высота правого блока */
 }
 
 .right img {
@@ -38,7 +39,7 @@ body, html {
 }
 
 .third {
-    background-color: #fff;
+    background-color: #b0b0b0;
     padding: 40px 20px;
     text-align: left; /* Выравнивание по левому краю */
 }
@@ -46,7 +47,7 @@ body, html {
 /* Адаптация для мобильных устройств */
 @media (max-width: 768px) {
     .container {
-        flex-direction: column;
+        flex-direction: column-reverse; /* Инвертируем порядок блоков */
         height: auto;
     }
 
