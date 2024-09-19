@@ -58,9 +58,8 @@ body, html {
         align-self: flex-start;
     }
 
-    /* Ограничение ширины контента в section на десктопе до 768px */
     section {
-        max-width: 768px; /* Ограничение ширины до 768px */
+        max-width: 500px; /* Ограничение ширины до 500px */
         width: 100%; /* Ширина блока будет 100% в пределах max-width */
     }
 }
