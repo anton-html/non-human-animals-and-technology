@@ -1,17 +1,12 @@
 /* Общие стили */
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body, html {
     height: 100%;
-    margin: 0; /* Убираем стандартные отступы у body и html */
-}
-
-h1 {
-    max-width: 500px; /* Ограничение ширины */
-    width: 100%; /* Ширина заголовка будет 100% в пределах max-width */
-    word-wrap: break-word; /* Перенос слов, если они не умещаются в строке */
 }
 
 .container {
@@ -25,12 +20,12 @@ h1 {
     padding: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: flex-start; /* Выравнивание содержимого по верхнему краю */
     align-items: flex-start;
 }
 
 .right img {
-    max-width: 70%;
+    max-width: 100%;
     height: auto;
     object-fit: contain;
     align-self: flex-start;
@@ -50,14 +45,14 @@ h1 {
 
     .left, .right {
         width: 100%;
-        padding: 10px; /* Уменьшение отступов на мобильных устройствах */
+        padding: 10px;
     }
 }
 
 /* Десктоп */
 @media (min-width: 769px) {
     section {
-        max-width: 500px; /* Ограничение ширины до 500px */
-        width: 100%; /* Ширина блока будет 100% в пределах max-width */
+        max-width: 500px;
+        width: 100%;
     }
 }
