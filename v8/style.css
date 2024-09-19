@@ -1,11 +1,5 @@
-/* Общие стили */
 * {
     box-sizing: border-box;
-}
-
-body, html {
-    height: 100%;
-    margin: 0; /* Убираем стандартные отступы у body и html */
 }
 
 .container {
@@ -30,7 +24,6 @@ body, html {
     align-self: flex-start;
 }
 
-/* Для третьего блока ниже левой и правой частей */
 .third {
     padding: 10px;
     text-align: left;
@@ -51,6 +44,7 @@ body, html {
 /* Десктоп */
 @media (min-width: 769px) {
     section {
+        max-width: 768px; /* Ограничение ширины до 500px */
         width: 100%; /* Ширина блока будет 100% в пределах max-width */
     }
 }
