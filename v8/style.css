@@ -1,3 +1,4 @@
+/* Общие стили */
 * {
     box-sizing: border-box;
 }
@@ -9,7 +10,7 @@ body, html {
 .container {
     display: flex;
     width: 100%;
-    overflow-x: hidden;
+    overflow-x: hidden; /* Скрыть горизонтальную прокрутку, если она возникает */
 }
 
 .left, .right {
@@ -22,10 +23,11 @@ body, html {
 }
 
 .right img {
-    max-width: 100%;
-    height: auto;
+    max-width: 100%;  /* Изображение адаптируется по ширине */
+    height: auto;     /* По умолчанию высота изображения будет автоматической */
 }
 
+/* Для третьего блока ниже левой и правой частей */
 .third {
     padding: 20px;
     text-align: left;
@@ -37,12 +39,25 @@ body, html {
         flex-direction: column-reverse;
     }
 
-    .left, .right, .third {
+    .left, .right {
         width: 100%;
-        padding: 10px;
+        padding: 10px; /* Уменьшение отступов на мобильных устройствах */
     }
+
+    .info-blocks {
+        flex-direction: column;
+    }
+
     .right img {
         max-width: 100%;
         height: auto;
+    }
+}
+
+/* Десктоп */
+@media (min-width: 769px) {
+    .right img {
+        height: 100vh;    /* Устанавливаем высоту изображения равной 100% высоты окна */
+        object-fit: cover; /* Сохраняем пропорции изображения, чтобы оно полностью заполняло блок */
     }
 }
