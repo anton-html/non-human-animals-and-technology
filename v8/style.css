@@ -1,12 +1,6 @@
-/* Общие стили */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
 body, html {
     height: 100%;
+    margin: 0; /* Убираем отступы у body */
 }
 
 .container {
@@ -20,15 +14,22 @@ body, html {
     padding: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Выравнивание содержимого по верхнему краю */
+    justify-content: flex-start; /* Выравнивание по верхнему краю */
     align-items: flex-start;
 }
 
+/* Стили для изображения */
 .right img {
     max-width: 100%;
     height: auto;
     object-fit: contain;
     align-self: flex-start;
+}
+
+/* Сохраняем стандартные отступы для элементов */
+h1, h2, p, ol, ul, table, td, a {
+    margin: initial;
+    padding: initial;
 }
 
 /* Для третьего блока ниже левой и правой частей */
@@ -52,7 +53,7 @@ body, html {
 /* Десктоп */
 @media (min-width: 769px) {
     section {
-        max-width: 500px;
+        max-width: 500px; /* Ограничение ширины до 500px */
         width: 100%;
     }
 }
