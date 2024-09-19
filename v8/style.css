@@ -8,6 +8,12 @@ body, html {
     margin: 0; /* Убираем стандартные отступы у body и html */
 }
 
+h1 {
+    max-width: 500px; /* Ограничение ширины */
+    width: 100%; /* Ширина заголовка будет 100% в пределах max-width */
+    word-wrap: break-word; /* Перенос слов, если они не умещаются в строке */
+}
+
 .container {
     display: flex;
     width: 100%;
