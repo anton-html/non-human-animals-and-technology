@@ -1,13 +1,16 @@
-/* Глобальный сброс отступов для всех элементов */
+/* Общие стили */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; /* Для правильного расчета ширины и высоты */
+    box-sizing: border-box;
 }
 
-/* Сброс для body и html */
 body, html {
     height: 100%;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    overflow-x: hidden; /* Скрыть горизонтальную прокрутку, если она возникает */
 }
 
 .left, .right {
@@ -15,27 +18,25 @@ body, html {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    padding: 10px;
+    padding: 20px;
     flex-direction: column;
 }
 
-/* Стили для изображения в правом блоке */
 .right img {
     max-width: 100%;  /* Изображение адаптируется по ширине */
     height: auto;     /* По умолчанию высота изображения будет автоматической */
 }
 
-/* Третий блок ниже левой и правой частей */
+/* Для третьего блока ниже левой и правой частей */
 .third {
-    padding: 10px;
+    padding: 20px;
     text-align: left;
 }
 
 /* Ограничение ширины контента внутри section */
 section {
-    max-width: 768px;   /* Ограничение ширины до 768px */
-    margin: 0 auto;     /* Центрируем блок по горизонтали */
-    padding: 0;         /* Сброс всех внутренних отступов */
+    max-width: 100%;   /* На мобильных устройствах ширина 100% */
+    padding: 10px;
 }
 
 /* Мобилка */
@@ -75,6 +76,6 @@ section {
     section {
         max-width: 768px;   /* Ограничение ширины до 768px */
         margin: 0 auto;     /* Центрируем блок по горизонтали */
-        padding: 10px;      /* Добавляем отступы по внутренним краям */
+        padding: 20px;      /* Устанавливаем отступы */
     }
 }
