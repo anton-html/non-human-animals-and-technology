@@ -44,10 +44,6 @@ body, html {
         padding: 10px;
     }
 
-    .info-blocks {
-        flex-direction: column;
-    }
-
     .right img {
         max-width: 100%;
         height: auto;
