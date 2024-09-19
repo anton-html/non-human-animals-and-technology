@@ -58,6 +58,7 @@ body, html {
 @media (min-width: 769px) {
     .right img {
         height: 70vh;    /* Устанавливаем высоту изображения равной 70% высоты окна */
+        object-fit: contain;
     }
 
     /* Ограничение ширины контента в section на десктопе до 768px */
