@@ -51,7 +51,6 @@ body, html {
 /* Десктоп */
 @media (min-width: 769px) {
     section {
-        max-width: 500px; /* Ограничение ширины до 500px */
         width: 100%; /* Ширина блока будет 100% в пределах max-width */
     }
 }
