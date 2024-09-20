@@ -18,6 +18,16 @@ h1 {
     color: #555;        /* Цвет */
 }
 
+.breadcrumb {
+    font-size: 0.875rem; /* это 87.5% от стандартных 16px */
+    color: #000; /* цвет текста хлебных крошек */
+}
+
+.breadcrumb a {
+    text-decoration: underline;
+    color: blue; /* стандартное оформление ссылок */
+}
+
 nav ol {
     padding: 0;
     margin: 0;
