@@ -7,13 +7,14 @@ html {
 }
 
 h1 {
-    margin-bottom: 0.2em; /* Уменьшаем отступ после h1 */
+    margin-bottom: 0.2em; /* Отступ после h1 */
 }
 
 .subheading {
     margin-top: 0;        /* Отступ сверху для h3 */
     font-size: 1.2em;     /* Размер шрифта */
     font-weight: normal;  /* Жирность */
+    font-style: italic;   /* Курсив */
     color: #555;        /* Цвет */
 }
 
