@@ -18,38 +18,34 @@ h1 {
     color: #555;        /* Цвет */
 }
 
-.breadcrumb {
-    display: flex;
-    list-style: none;
+nav ol {
     padding: 0;
     margin: 0;
-    font-size: 1em; /* Размер шрифта */
+    list-style: none;
 }
 
-.breadcrumb li {
-    margin-right: 10px; /* Отступ между элементами */
+nav ol li {
+    display: inline;
 }
 
-.breadcrumb li:not(:last-child)::after {
-    content: '>'; /* Разделитель между элементами */
-    margin-left: 10px;
-    color: #999; /* Цвет разделителя */
+nav ol li::after {
+    content: " / ";
+    padding: 0 5px;
 }
 
-.breadcrumb a {
-    text-decoration: none;
-    color: #0073e6; /* Цвет ссылки */
+nav ol li:last-child::after {
+    content: "";
 }
 
-.breadcrumb a:hover {
-    text-decoration: underline;
+nav ol a {
+    text-decoration: underline; /* Стиль ссылок такой же, как и на сайте */
+    color: inherit; /* Ссылки наследуют цвет от остального текста */
 }
 
-.breadcrumb .current {
-    font-style: italic; /* Курсив для текущей страницы */
-    color: #555; /* Приглушенный цвет для текущей страницы */
-    pointer-events: none; /* Текущая страница не является ссылкой */
+nav ol li:last-child {
+    font-weight: bold;
 }
+
 
 .container {
     display: flex;
