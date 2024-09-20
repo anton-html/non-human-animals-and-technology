@@ -38,14 +38,13 @@ nav ol li:last-child::after {
 }
 
 nav ol a {
-    text-decoration: underline; /* Стиль ссылок такой же, как и на сайте */
-    color: inherit; /* Ссылки наследуют цвет от остального текста */
+    color: blue; /* Стандартный синий цвет ссылок */
+    text-decoration: underline; /* Подчеркивание, как у стандартных ссылок */
 }
 
 nav ol li:last-child {
-    font-weight: bold;
+    font-weight: bold; /* Последний элемент жирным, без ссылки */
 }
-
 
 .container {
     display: flex;
