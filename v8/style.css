@@ -33,6 +33,11 @@ html {
     text-align: left;
 }
 
+.limited-img {
+    width: 200px; /* Ограничение ширины до 200px */
+    height: auto; /* Сохраняем пропорциональность изображения */
+}
+
 /* Мобилка */
 @media (max-width: 768px) {
     .container {
