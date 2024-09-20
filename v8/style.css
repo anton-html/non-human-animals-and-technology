@@ -43,7 +43,7 @@ nav ol a {
 }
 
 nav ol li:last-child {
-    font-weight: bold; /* Последний элемент жирным, без ссылки */
+    color: inherit; /* Текущий элемент без ссылки, цвет как у основного текста */
 }
 
 .container {
