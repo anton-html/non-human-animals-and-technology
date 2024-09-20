@@ -6,6 +6,17 @@ html {
     box-sizing: border-box;
 }
 
+h1 {
+    margin-bottom: 0.2em; /* Уменьшаем отступ после h1 */
+}
+
+.subheading {
+    margin-top: 0;        /* Отступ сверху для h3 */
+    font-size: 1.2em;     /* Размер шрифта */
+    font-weight: normal;  /* Жирность */
+    color: #555;        /* Цвет */
+}
+
 .container {
     display: flex;
     width: 100%;
