@@ -46,17 +46,31 @@ nav ol li {
     display: inline;
 }
 
-nav ol li::after {
-    content: " / ";
-    padding: 0 5px;
-}
-
 nav ol li:last-child::after {
     content: "";
 }
 
 nav ol li:last-child {
     color: inherit; /* Текущий элемент без ссылки */
+}
+
+
+nav ol li::after {
+    content: " / ";
+    padding: 0 5px;
+    color: #000; /* Цвет для светлой темы по умолчанию */
+}
+
+@media (prefers-color-scheme: dark) {
+    nav ol li::after {
+        color: white; /* Цвет разделителя для темной темы */
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    nav ol li::after {
+        color: black; /* Цвет разделителя для светлой темы */
+    }
 }
 
 .container {
