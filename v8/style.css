@@ -46,6 +46,34 @@ h1 {
     }
 }
 
+/* Общий цвет ссылок */
+a {
+    color: #0021F5; /* Цвет ссылок для всех тем */
+    text-decoration: underline; /* Подчеркивание ссылок */
+}
+
+/* Темная тема */
+@media (prefers-color-scheme: dark) {
+    a {
+        color: #0021F5; /* Цвет ссылок в темной теме */
+    }
+
+    nav ol li:last-child {
+        color: white; /* Цвет текущей страницы в темной теме */
+    }
+}
+
+/* Светлая тема */
+@media (prefers-color-scheme: light) {
+    a {
+        color: #0021F5; /* Цвет ссылок в светлой теме */
+    }
+
+    nav ol li:last-child {
+        color: black; /* Цвет текущей страницы в светлой теме */
+    }
+}
+
 nav ol {
     padding: 0;
     margin: 0;
