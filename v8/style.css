@@ -29,51 +29,13 @@ h1 {
     font-style: italic; /* Курсив */
 }
 
-.breadcrumb a {
-    text-decoration: underline;
-    color: blue;
-}
-
-@media (prefers-color-scheme: dark) {
-    nav ol li:last-child {
-        color: white; /* Цвет для темной темы */
-    }
-}
-
-@media (prefers-color-scheme: light) {
-    nav ol li:last-child {
-        color: black; /* Цвет для светлой темы */
-    }
-}
-
-/* Общий цвет ссылок */
-a {
+/* Общие стили для всех ссылок */
+a, .breadcrumb a {
     color: #0021F5; /* Цвет ссылок для всех тем */
     text-decoration: underline; /* Подчеркивание ссылок */
 }
 
-/* Темная тема */
-@media (prefers-color-scheme: dark) {
-    a {
-        color: #0021F5; /* Цвет ссылок в темной теме */
-    }
-
-    nav ol li:last-child {
-        color: white; /* Цвет текущей страницы в темной теме */
-    }
-}
-
-/* Светлая тема */
-@media (prefers-color-scheme: light) {
-    a {
-        color: #0021F5; /* Цвет ссылок в светлой теме */
-    }
-
-    nav ol li:last-child {
-        color: black; /* Цвет текущей страницы в светлой теме */
-    }
-}
-
+/* Стили для навигации (хлебные крошки) */
 nav ol {
     padding: 0;
     margin: 0;
@@ -93,13 +55,8 @@ nav ol li:last-child::after {
     content: "";
 }
 
-nav ol a {
-    color: blue; /* Стандартный синий цвет ссылок */
-    text-decoration: underline; /* Подчеркивание, как у стандартных ссылок */
-}
-
 nav ol li:last-child {
-    color: inherit; /* Текущий элемент без ссылки, цвет как у основного текста */
+    color: inherit; /* Текущий элемент без ссылки */
 }
 
 .container {
@@ -121,7 +78,6 @@ nav ol li:last-child {
     max-width: 100%;
     height: auto;
     object-fit: contain;
-    align-self: flex-start;
 }
 
 .third {
@@ -134,14 +90,26 @@ nav ol li:last-child {
     height: auto; /* Сохраняем пропорциональность изображения */
 }
 
+/* Темная и светлая темы */
 @media (prefers-color-scheme: dark) {
     body {
         background-color: black;
         color: white;
     }
 
-    a {
-        color: #1e90ff; /* Цвет ссылок в темной теме */
+    nav ol li:last-child {
+        color: white; /* Цвет для текущей страницы в темной теме */
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: white;
+        color: black;
+    }
+
+    nav ol li:last-child {
+        color: black; /* Цвет для текущей страницы в светлой теме */
     }
 }
 
@@ -169,7 +137,7 @@ nav ol li:last-child {
 /* Десктоп */
 @media (min-width: 769px) {
     section {
-        max-width: 768px; /* Ограничение ширины до 500px */
+        max-width: 768px; /* Ограничение ширины до 768px */
         width: 100%; /* Ширина блока будет 100% в пределах max-width */
     }
 }
