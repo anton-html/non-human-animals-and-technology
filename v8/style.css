@@ -2,6 +2,11 @@ html {
     font-size: 125%;
 }
 
+body {
+    background-color: white;
+    color: black;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -87,6 +92,17 @@ nav ol li:last-child {
 .limited-img {
     width: 400px; /* Ограничение ширины изображения */
     height: auto; /* Сохраняем пропорциональность изображения */
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: black;
+        color: white;
+    }
+
+    a {
+        color: #1e90ff; /* Цвет ссылок в темной теме */
+    }
 }
 
 /* Мобилка */
