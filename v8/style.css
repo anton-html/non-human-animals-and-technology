@@ -58,7 +58,7 @@ nav ol li:last-child {
     color: inherit; /* Текущий элемент без ссылки */
 }
 
-nav ol li::after {
+nav ol li:not(:last-child)::after {
     content: " / ";
     padding: 0 5px;
     color: black; /* Цвет разделителя по умолчанию */
