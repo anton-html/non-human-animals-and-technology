@@ -24,14 +24,18 @@ h1 {
 }
 
 .breadcrumb {
-    font-size: 0.875rem; /* Размер меньше основного текста */
-    font-style: italic; /* Курсив */
+    font-size: 0.875rem;  /* Размер меньше основного текста */
+    font-style: italic;   /* Курсив */
 }
 
 /* Общие стили для всех ссылок */
 a, .breadcrumb a {
-    color: #0021F5; /* Цвет ссылок для всех тем */
     text-decoration: underline; /* Подчеркивание ссылок */
+    color: #0021F5; /* Цвет для непосещенных ссылок */
+}
+
+a:visited {
+    color: #551A8B; /* Цвет для посещенных ссылок */
 }
 
 /* Стили для навигации (хлебные крошки) */
@@ -62,22 +66,14 @@ nav ol li::after {
         color: white;
     }
 
-    nav ol li::after {
-        color: white; /* Цвет разделителя для темной темы */
-    }
-
-    nav ol li:last-child {
-        color: white; /* Цвет для текущей страницы в темной теме */
+    nav ol li::after, nav ol li:last-child {
+        color: white; /* Цвет разделителя и последнего элемента для темной темы */
     }
 }
 
 @media (prefers-color-scheme: light) {
-    nav ol li::after {
-        color: black; /* Цвет разделителя для светлой темы */
-    }
-
-    nav ol li:last-child {
-        color: black; /* Цвет для текущей страницы в светлой теме */
+    nav ol li::after, nav ol li:last-child {
+        color: black; /* Цвет разделителя и последнего элемента для светлой темы */
     }
 }
 
@@ -128,13 +124,7 @@ nav ol li::after {
     }
 
     section {
-        width: 100%; /* Секция на всю ширину */
-        max-width: none; /* Убираем ограничение ширины */
-    }
-
-    section img {
-        width: 100%; /* Изображение на всю ширину секции */
-        height: auto;
+        width: 100%;
     }
 }
 
@@ -144,9 +134,9 @@ nav ol li::after {
         max-width: 768px; /* Ограничение ширины до 768px */
         width: 100%;
     }
+}
 
-    section img {
-        max-width: 100%;
-        height: auto;
-    }
+section img {
+    width: 100%;
+    height: auto;
 }
