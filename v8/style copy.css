@@ -1,0 +1,152 @@
+html {
+    font-size: 125%;
+}
+
+body {
+    background-color: white;
+    color: black;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    margin-bottom: 0.2em; /* Отступ после h1 */
+}
+
+.subheading {
+    margin-top: 0;        /* Отступ сверху для h3 */
+    font-size: 1.2em;     /* Размер шрифта */
+    font-weight: normal;  /* Жирность */
+    font-style: italic;   /* Курсив */
+    color: #555;        /* Цвет */
+}
+
+.breadcrumb {
+    font-size: 0.875rem; /* Размер меньше основного текста */
+    font-style: italic; /* Курсив */
+}
+
+/* Общие стили для всех ссылок */
+a, .breadcrumb a {
+    color: #0021F5; /* Цвет ссылок для всех тем */
+    text-decoration: underline; /* Подчеркивание ссылок */
+}
+
+/* Стили для навигации (хлебные крошки) */
+nav ol {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+nav ol li {
+    display: inline;
+}
+
+nav ol li:last-child {
+    color: inherit; /* Текущий элемент без ссылки */
+}
+
+nav ol li::after {
+    content: " / ";
+    padding: 0 5px;
+    color: black; /* Цвет разделителя по умолчанию */
+}
+
+/* Цвет разделителя в зависимости от темы */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: black;
+        color: white;
+    }
+
+    nav ol li::after {
+        color: white; /* Цвет разделителя для темной темы */
+    }
+
+    nav ol li:last-child {
+        color: white; /* Цвет для текущей страницы в темной теме */
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    nav ol li::after {
+        color: black; /* Цвет разделителя для светлой темы */
+    }
+
+    nav ol li:last-child {
+        color: black; /* Цвет для текущей страницы в светлой теме */
+    }
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.left, .right {
+    width: 50%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.right img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.third {
+    padding: 10px;
+    text-align: left;
+}
+
+.limited-img {
+    width: 400px; /* Ограничение ширины изображения */
+    height: auto; /* Сохраняем пропорциональность изображения */
+}
+
+/* Мобилка */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column-reverse;
+    }
+
+    .left, .right {
+        width: 100%;
+    }
+
+    .limited-img {
+        width: 100%; /* Изображение на всю ширину */
+        height: auto;
+    }
+
+    section {
+        width: 100%; /* Секция на всю ширину */
+        max-width: none; /* Убираем ограничение ширины */
+    }
+
+    section img {
+        width: 100%; /* Изображение на всю ширину секции */
+        height: auto;
+    }
+}
+
+/* Десктоп */
+@media (min-width: 769px) {
+    section {
+        max-width: 768px; /* Ограничение ширины до 768px */
+        width: 100%;
+    }
+
+    section img {
+        max-width: 100%;
+        height: auto;
+    }
+}
