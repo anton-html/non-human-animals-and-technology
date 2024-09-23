@@ -25,7 +25,6 @@ h1 {
 
 .breadcrumb {
     font-size: 0.875rem; /* Размер меньше основного текста */
-    color: #000;
     font-style: italic; /* Курсив */
 }
 
@@ -46,30 +45,39 @@ nav ol li {
     display: inline;
 }
 
-nav ol li:last-child::after {
-    content: "";
-}
-
 nav ol li:last-child {
     color: inherit; /* Текущий элемент без ссылки */
 }
 
-
 nav ol li::after {
     content: " / ";
     padding: 0 5px;
-    color: #000; /* Цвет для светлой темы по умолчанию */
+    color: black; /* Цвет разделителя по умолчанию */
 }
 
+/* Цвет разделителя в зависимости от темы */
 @media (prefers-color-scheme: dark) {
+    body {
+        background-color: black;
+        color: white;
+    }
+
     nav ol li::after {
         color: white; /* Цвет разделителя для темной темы */
+    }
+
+    nav ol li:last-child {
+        color: white; /* Цвет для текущей страницы в темной теме */
     }
 }
 
 @media (prefers-color-scheme: light) {
     nav ol li::after {
         color: black; /* Цвет разделителя для светлой темы */
+    }
+
+    nav ol li:last-child {
+        color: black; /* Цвет для текущей страницы в светлой теме */
     }
 }
 
@@ -104,29 +112,6 @@ nav ol li::after {
     height: auto; /* Сохраняем пропорциональность изображения */
 }
 
-/* Темная и светлая темы */
-@media (prefers-color-scheme: dark) {
-    body {
-        background-color: black;
-        color: white;
-    }
-
-    nav ol li:last-child {
-        color: white; /* Цвет для текущей страницы в темной теме */
-    }
-}
-
-@media (prefers-color-scheme: light) {
-    body {
-        background-color: white;
-        color: black;
-    }
-
-    nav ol li:last-child {
-        color: black; /* Цвет для текущей страницы в светлой теме */
-    }
-}
-
 /* Мобилка */
 @media (max-width: 768px) {
     .container {
@@ -135,26 +120,21 @@ nav ol li::after {
 
     .left, .right {
         width: 100%;
-        padding: 10px;
-    }
-
-    .right img {
-        width: 100%;
     }
 
     .limited-img {
-        width: 100%; /* Ограничение ширины изображения */
+        width: 100%; /* Изображение на всю ширину */
         height: auto;
     }
-    
+
     section {
-        width: 100%; /* Ширина секции будет 100% на мобильных */
+        width: 100%; /* Секция на всю ширину */
         max-width: none; /* Убираем ограничение ширины */
     }
 
     section img {
-        width: 100%; /* Изображение будет на всю ширину секции */
-        height: auto; /* Сохраняем пропорции изображения */
+        width: 100%; /* Изображение на всю ширину секции */
+        height: auto;
     }
 }
 
@@ -162,11 +142,11 @@ nav ol li::after {
 @media (min-width: 769px) {
     section {
         max-width: 768px; /* Ограничение ширины до 768px */
-        width: 100%; /* Ширина блока будет 100% в пределах max-width */
+        width: 100%;
     }
 
     section img {
-        max-width: 100%; /* Ограничение ширины изображения */
-        height: auto; /* Сохраняем пропорции изображения */
+        max-width: 100%;
+        height: auto;
     }
 }
