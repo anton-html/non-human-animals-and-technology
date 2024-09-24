@@ -95,31 +95,54 @@
       </section>
         <hr />
         <footer>
-          <p>Выбрать тему оформления:<br><a href="#" id="light-theme">светлая</a>&nbsp;/&nbsp;<a href="#" id="dark-theme">темная</a></p>
-       </footer>     
+          <p>Выбрать тему оформления: 
+             <a href="#" id="light-theme" style="display:none;">светлая</a>, 
+             <a href="#" id="dark-theme" style="display:none;">темная</a>
+          </p>
+       </footer>          
         <address>
           <p>Последнее изменение: 20&nbsp;сентября 2024&nbsp;года</p>
           <a href="https://garage.digital/ru/"><img src="images/GD_logo.svg" alt="Программа Музея «Гараж» о&nbsp;новейших технологиях и&nbsp;медиа в&nbsp;искусстве и&nbsp;исследованиях" class="limited-img" /></a>
       </address>
       </div>
       <script>
-        document.getElementById('light-theme').addEventListener('click', function() {
-            document.body.classList.remove('dark-theme');
-            localStorage.setItem('theme', 'light'); // Сохраняем выбор в LocalStorage
-        });
+        function updateThemeLinks() {
+            const lightThemeLink = document.getElementById('light-theme');
+            const darkThemeLink = document.getElementById('dark-theme');
+            const currentTheme = document.body.classList.contains('dark-theme') ? 'dark' : 'light';
      
-        document.getElementById('dark-theme').addEventListener('click', function() {
-            document.body.classList.add('dark-theme');
-            localStorage.setItem('theme', 'dark'); // Сохраняем выбор в LocalStorage
-        });
+            // Если текущая тема светлая, показываем только ссылку для переключения на темную тему
+            if (currentTheme === 'light') {
+                lightThemeLink.style.display = 'none';
+                darkThemeLink.style.display = 'inline';
+            } 
+            // Если тема темная, показываем только ссылку для переключения на светлую тему
+            else {
+                lightThemeLink.style.display = 'inline';
+                darkThemeLink.style.display = 'none';
+            }
      
-        // Проверяем, если пользователь уже выбирал тему и сохраняем ее
-
+            // Добавляем обработчики событий для переключения тем
+            darkThemeLink.addEventListener('click', function() {
+                document.body.classList.add('dark-theme');
+                localStorage.setItem('theme', 'dark');
+                updateThemeLinks(); // Обновляем ссылки
+            });
+     
+            lightThemeLink.addEventListener('click', function() {
+                document.body.classList.remove('dark-theme');
+                localStorage.setItem('theme', 'light');
+                updateThemeLinks(); // Обновляем ссылки
+            });
+        }
+     
+        // Проверяем сохраненную тему при загрузке страницы
         window.onload = function() {
             const savedTheme = localStorage.getItem('theme');
             if (savedTheme === 'dark') {
                 document.body.classList.add('dark-theme');
             }
+            updateThemeLinks(); // Обновляем отображение ссылок при загрузке
         };
      </script>     
 </body>
