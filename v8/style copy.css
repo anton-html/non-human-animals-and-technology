@@ -68,36 +68,29 @@ nav ol li {
     display: inline;
 }
 
-/* Стили для текущего элемента без ссылки */
 nav ol li:last-child {
-    color: inherit; /* Цвет текущего элемента по умолчанию */
+    color: inherit; /* Текущий элемент без ссылки */
 }
 
-/* Разделитель по умолчанию */
 nav ol li:not(:last-child)::after {
     content: " / ";
     padding: 0 5px;
     color: black; /* Цвет разделителя по умолчанию */
 }
 
-/* Цвет разделителя и текущего элемента в зависимости от темы */
+/* Цвет разделителя в зависимости от темы */
 @media (prefers-color-scheme: dark) {
+    body {
+        background-color: black;
+        color: white;
+    }
+
     nav ol li:not(:last-child)::after {
         color: white; /* Цвет разделителя для темной темы */
     }
 
     nav ol li:last-child {
         color: white; /* Цвет для текущей страницы в темной теме */
-    }
-}
-
-@media (prefers-color-scheme: light) {
-    nav ol li:not(:last-child)::after {
-        color: black; /* Цвет разделителя для светлой темы */
-    }
-
-    nav ol li:last-child {
-        color: black; /* Цвет для текущей страницы в светлой теме */
     }
 }
 
