@@ -8,12 +8,6 @@ body {
     color: black;
 }
 
-/* Темная тема для ручного переключения */
-body.dark-theme {
-    background-color: black;
-    color: white;
-}
-
 /* Темная тема для устройств с темной схемой */
 @media (prefers-color-scheme: dark) {
     body {
@@ -22,7 +16,13 @@ body.dark-theme {
     }
 }
 
-/* Светлая тема для ручного переключения */
+/* Ручное переключение на темную тему */
+body.dark-theme {
+    background-color: black;
+    color: white;
+}
+
+/* Ручное переключение на светлую тему */
 body.light-theme {
     background-color: white;
     color: black;
@@ -103,6 +103,26 @@ body:not(.dark-theme) nav ol li:not(:last-child)::after {
 
 body:not(.dark-theme) nav ol li:last-child {
     color: black; /* Цвет для текущей страницы в светлой теме */
+}
+
+@media (prefers-color-scheme: light) {
+    nav ol li:not(:last-child)::after {
+        color: black; /* Цвет разделителя для светлой темы */
+    }
+
+    nav ol li:last-child {
+        color: black; /* Цвет для текущей страницы в светлой теме */
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    nav ol li::after {
+        color: black; /* Цвет разделителя для светлой темы */
+    }
+
+    nav ol li:last-child {
+        color: black; /* Цвет для текущей страницы в светлой теме */
+    }
 }
 
 .container {
