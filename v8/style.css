@@ -99,19 +99,20 @@ nav ol li:not(:last-child)::after {
 .two-column-section {
     display: flex;
     flex-wrap: wrap;
-    gap: 40px; /* Расстояние между колонками */
-    align-items: flex-start; /* Выравнивание по верхнему краю */
+    gap: 20px; /* Расстояние между колонками */
+    align-items: flex-start; /* Выравнивание колонок по верхнему краю */
 }
 
 .two-column-section > div {
     flex: 1; /* Колонки будут одинаковой ширины */
-    min-width: 200px; /* Минимальная ширина для мобильных */
+    min-width: 200px; /* Минимальная ширина для каждой колонки */
 }
 
 /* Для мобильных экранов — колонки в столбик */
 @media (max-width: 768px) {
     .two-column-section {
-        flex-direction: column;
+        flex-direction: column; /* Вертикальное расположение */
+        align-items: stretch; /* Растягиваем элементы на полную ширину */
     }
 }
 
