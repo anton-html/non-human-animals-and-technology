@@ -149,7 +149,7 @@ nav ol li:not(:last-child)::after {
 address {
     display: flex;
     justify-content: space-between; /* Размещаем элементы по краям */
-    align-items: center; /* Выравнивание по вертикали по центру */
+    align-items: top; /* Выравнивание по вертикали по центру */
     flex-wrap: wrap; /* Разрешаем перенос элементов на новую строку для мобильных */
     margin-top: 20px;
 }
