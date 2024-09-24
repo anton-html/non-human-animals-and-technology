@@ -161,9 +161,16 @@ nav ol li:not(:last-child)::after {
     height: auto; /* Сохраняем пропорциональность изображения */
 }
 
+.right img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    background-color: white; /* Светлый фон для изображений в темной теме */
+}
+
 @media (prefers-color-scheme: dark) {
     .right img {
-        background-color: white; /* Добавляем светлый фон для изображений в темной теме */
+        background-color: white; /* Обеспечивает видимость на темном фоне */
     }
 }
 
