@@ -121,6 +121,12 @@ nav ol li:not(:last-child)::after {
     height: auto; /* Сохраняем пропорциональность изображения */
 }
 
+@media (prefers-color-scheme: dark) {
+    .right img {
+        background-color: white; /* Добавляем светлый фон для изображений в темной теме */
+    }
+}
+
 /* Мобилка */
 @media (max-width: 768px) {
     .container {
