@@ -80,15 +80,22 @@ nav ol li:not(:last-child)::after {
     color: black; /* Цвет разделителя по умолчанию */
 }
 
-/* Цвет разделителя и текущего элемента в зависимости от темы */
-@media (prefers-color-scheme: dark) {
-    nav ol li:not(:last-child)::after {
-        color: white; /* Цвет разделителя для темной темы */
-    }
+/* Цвет разделителя и текущего элемента для темной темы */
+body.dark-theme nav ol li:not(:last-child)::after {
+    color: white; /* Цвет разделителя для темной темы */
+}
 
-    nav ol li:last-child {
-        color: white; /* Цвет для текущей страницы в темной теме */
-    }
+body.dark-theme nav ol li:last-child {
+    color: white; /* Цвет для текущей страницы в темной теме */
+}
+
+/* Цвет разделителя и текущего элемента для светлой темы */
+body:not(.dark-theme) nav ol li:not(:last-child)::after {
+    color: black; /* Цвет разделителя для светлой темы */
+}
+
+body:not(.dark-theme) nav ol li:last-child {
+    color: black; /* Цвет для текущей страницы в светлой теме */
 }
 
 @media (prefers-color-scheme: light) {
