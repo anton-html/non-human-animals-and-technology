@@ -2,9 +2,23 @@ html {
     font-size: 125%;
 }
 
+/* По умолчанию светлая тема */
 body {
     background-color: white;
     color: black;
+}
+
+/* Темная тема */
+body.dark-theme {
+    background-color: black;
+    color: white;
+}
+
+/* Мобильная адаптация */
+@media (max-width: 768px) {
+    body {
+        font-size: 100%;
+    }
 }
 
 * {
