@@ -171,7 +171,7 @@ body:not(.dark-theme) nav ol li:last-child {
 }
 
 .limited-img {
-    width: 400px; /* Ограничение ширины изображения */
+    width: 600px; /* Ограничение ширины изображения */
     height: auto; /* Сохраняем пропорциональность изображения */
 }
 
