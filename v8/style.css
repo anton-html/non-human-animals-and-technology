@@ -97,22 +97,18 @@ nav ol li:not(:last-child)::after {
 }
 
 .two-column-section {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px; /* Расстояние между колонками */
-    align-items: flex-start; /* Выравнивание колонок по верхнему краю */
+    column-count: 2; /* Разбиваем содержимое на 2 колонки */
+    column-gap: 40px; /* Задаем расстояние между колонками */
 }
 
-.two-column-section > div {
-    flex: 1; /* Колонки будут одинаковой ширины */
-    min-width: 200px; /* Минимальная ширина для каждой колонки */
+.two-column-section p {
+    break-inside: avoid; /* Предотвращаем разрыв блоков текста между колонками */
 }
 
-/* Для мобильных экранов — колонки в столбик */
+/* Адаптивный дизайн для мобильных устройств */
 @media (max-width: 768px) {
     .two-column-section {
-        flex-direction: column; /* Вертикальное расположение */
-        align-items: stretch; /* Растягиваем элементы на полную ширину */
+        column-count: 1; /* Возвращаемся к одной колонке на мобильных */
     }
 }
 
