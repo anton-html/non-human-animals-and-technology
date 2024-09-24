@@ -34,27 +34,27 @@ h1 {
     font-size: 1.2em;     /* Размер шрифта */
     font-weight: normal;  /* Жирность */
     font-style: italic;   /* Курсив */
-    color: #555;          /* Цвет */
+    color: #555;
 }
 
 .breadcrumb {
-    font-size: 0.875rem;  /* Размер меньше основного текста */
-    font-style: italic;   /* Курсив */
+    font-size: 0.875rem;
+    font-style: italic;
 }
 
 /* Общие стили для всех ссылок */
 a, .breadcrumb a {
-    color: #0021F5;        /* Цвет ссылок */
-    text-decoration: underline; /* Подчеркивание ссылок */
+    color: #0021F5; 
+    text-decoration: underline;
 }
 
-/* Стили для непосещенных и посещенных ссылок */
+/* Стили для посещенных и непосещенных ссылок */
 a:link {
-    color: #0021F5; /* Цвет для непосещенных ссылок */
+    color: #0021F5;
 }
 
 a:visited {
-    color: #551A8B; /* Цвет для посещенных ссылок (например, фиолетовый) */
+    color: #551A8B;
 }
 
 /* Стили для навигации (хлебные крошки) */
@@ -68,53 +68,34 @@ nav ol li {
     display: inline;
 }
 
-/* Стили для текущего элемента без ссылки */
+/* Текущий элемент хлебных крошек */
 nav ol li:last-child {
-    color: inherit; /* Цвет текущего элемента по умолчанию */
+    color: inherit;
 }
 
-/* Разделитель по умолчанию */
+/* Разделитель и текущий элемент по умолчанию */
 nav ol li:not(:last-child)::after {
     content: " / ";
     padding: 0 5px;
-    color: black; /* Цвет разделителя по умолчанию */
+    color: black;
 }
 
-/* Цвет разделителя и текущего элемента для темной темы */
-body.dark-theme nav ol li:not(:last-child)::after {
-    color: white; /* Цвет разделителя для темной темы */
-}
-
+/* Цвет для темной темы */
+body.dark-theme nav ol li:not(:last-child)::after, 
 body.dark-theme nav ol li:last-child {
-    color: white; /* Цвет для текущей страницы в темной теме */
+    color: white;
 }
 
-/* Цвет разделителя и текущего элемента для светлой темы */
-body:not(.dark-theme) nav ol li:not(:last-child)::after {
-    color: black; /* Цвет разделителя для светлой темы */
-}
-
+/* Цвет для светлой темы */
+body:not(.dark-theme) nav ol li:not(:last-child)::after, 
 body:not(.dark-theme) nav ol li:last-child {
-    color: black; /* Цвет для текущей страницы в светлой теме */
+    color: black;
 }
 
-@media (prefers-color-scheme: light) {
-    nav ol li:not(:last-child)::after {
-        color: black; /* Цвет разделителя для светлой темы */
-    }
-
-    nav ol li:last-child {
-        color: black; /* Цвет для текущей страницы в светлой теме */
-    }
-}
-
-@media (prefers-color-scheme: light) {
+/* Адаптация хлебных крошек под схему цветового оформления */
+@media (prefers-color-scheme: light), (prefers-color-scheme: dark) {
     nav ol li::after {
-        color: black; /* Цвет разделителя для светлой темы */
-    }
-
-    nav ol li:last-child {
-        color: black; /* Цвет для текущей страницы в светлой теме */
+        color: black; /* Светлая тема по умолчанию */
     }
 }
 
@@ -127,26 +108,26 @@ body:not(.dark-theme) nav ol li:last-child {
 .two-column-section {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start; /* Выравниваем оба столбца по верхнему краю */
+    align-items: flex-start;
 }
 
 .two-column-section > div {
-    width: 48%; /* Устанавливаем ширину для обоих столбцов */
+    width: 48%;
 }
 
 .two-column-section p {
-    margin: 0 0 1em 0; /* Отступы между абзацами */
+    margin: 0 0 1em 0;
 }
 
-/* Адаптивный дизайн для мобильных устройств */
+/* Адаптация для мобильных устройств */
 @media (max-width: 768px) {
     .two-column-section {
-        flex-direction: column; /* Строим столбики в одну колонку на мобильных */
+        flex-direction: column;
     }
 
     .two-column-section > div {
-        width: 100%; /* Полная ширина на мобильных */
-        margin-bottom: 1em; /* Добавляем отступы между секциями */
+        width: 100%;
+        margin-bottom: 1em;
     }
 }
 
@@ -163,36 +144,14 @@ body:not(.dark-theme) nav ol li:last-child {
     max-width: 100%;
     height: auto;
     object-fit: contain;
-}
-
-.third {
-    padding: 10px;
-    text-align: left;
-}
-
-.limited-img {
-    width: 600px; /* Ограничение ширины изображения */
-    height: auto; /* Сохраняем пропорциональность изображения */
-}
-
-.right img {
-    max-width: 100%;
-    height: auto;
-    object-fit: contain;
-    background-color: white; /* Светлый фон для изображений в темной теме */
-}
-
-@media (prefers-color-scheme: dark) {
-    .right img {
-        background-color: white; /* Обеспечивает видимость на темном фоне */
-    }
+    background-color: white; /* Фон для темной темы */
 }
 
 address {
     display: flex;
-    justify-content: space-between; /* Размещаем элементы по краям */
-    align-items: top; /* Выравнивание по вертикали по центру */
-    flex-wrap: wrap; /* Разрешаем перенос элементов на новую строку для мобильных */
+    justify-content: space-between;
+    align-items: top;
+    flex-wrap: wrap;
     margin-top: 20px;
 }
 
@@ -201,53 +160,36 @@ address p {
 }
 
 address img {
-    max-width: 600px; /* Задаем максимальную ширину для изображения */
-    height: auto; /* Автоматически сохраняем пропорции изображения */
+    max-width: 600px;
+    height: auto;
 }
 
-/* Адаптивный дизайн для мобильных устройств */
+/* Адаптация для мобильных устройств */
 @media (max-width: 768px) {
     address {
-        flex-direction: column; /* Элементы располагаются в колонку на мобильных */
-        align-items: flex-start; /* Выравнивание по левому краю */
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     address img {
-        max-width: 100%; /* Изображение на всю ширину на мобильных */
-        margin-top: 20px; /* Добавляем отступ сверху для изображения */
+        max-width: 100%;
+        margin-top: 20px;
     }
 }
 
-/* Мобилка */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column-reverse;
-    }
+.container {
+    flex-direction: column-reverse;
+}
 
-    .left, .right {
-        width: 100%;
-    }
-
-    .limited-img {
-        width: 100%; /* Изображение на всю ширину */
-        height: auto;
-    }
-
-    section {
-        width: 100%; /* Секция на всю ширину */
-        max-width: none; /* Убираем ограничение ширины */
-    }
-
-    section img {
-        width: 100%; /* Изображение на всю ширину секции */
-        height: auto;
-    }
+.limited-img {
+    width: 100%;
+    height: auto;
 }
 
 /* Десктоп */
 @media (min-width: 769px) {
     section {
-        max-width: 768px; /* Ограничение ширины до 768px */
+        max-width: 768px;
         width: 100%;
     }
 
