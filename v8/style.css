@@ -127,6 +127,35 @@ nav ol li:not(:last-child)::after {
     }
 }
 
+address {
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+    flex-wrap: wrap; /* Разрешаем перенос элементов на новую строку для мобильных */
+}
+
+address p {
+    margin: 0;
+}
+
+address img {
+    max-width: 400px; /* Задаем максимальную ширину для изображения */
+    height: auto; /* Автоматически сохраняем пропорции изображения */
+}
+
+/* Адаптивный дизайн для мобильных устройств */
+
+@media (max-width: 768px) {
+    address {
+        flex-direction: column; /* Элементы располагаются в колонку на мобильных */
+        align-items: flex-start; /* Выравнивание по левому краю */
+    }
+
+    address img {
+        max-width: 100%; /* Изображение на всю ширину на мобильных */
+    }
+}
+
 /* Мобилка */
 @media (max-width: 768px) {
     .container {
