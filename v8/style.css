@@ -8,17 +8,24 @@ body {
     color: black;
 }
 
-/* Темная тема */
+/* Темная тема для устройств с темной схемой */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: black;
+        color: white;
+    }
+}
+
+/* Ручное переключение на темную тему */
 body.dark-theme {
     background-color: black;
     color: white;
 }
 
-/* Мобильная адаптация */
-@media (max-width: 768px) {
-    body {
-        font-size: 100%;
-    }
+/* Ручное переключение на светлую тему */
+body.light-theme {
+    background-color: white;
+    color: black;
 }
 
 * {
