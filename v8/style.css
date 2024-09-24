@@ -129,9 +129,10 @@ nav ol li:not(:last-child)::after {
 
 address {
     display: flex;
-    justify-content: space-between;
-    align-items: top;
+    justify-content: space-between; /* Размещаем элементы по краям */
+    align-items: center; /* Выравнивание по вертикали по центру */
     flex-wrap: wrap; /* Разрешаем перенос элементов на новую строку для мобильных */
+    margin-top: 20px;
 }
 
 address p {
@@ -139,12 +140,11 @@ address p {
 }
 
 address img {
-    max-width: 400px; /* Задаем максимальную ширину для изображения */
+    max-width: 200px; /* Задаем максимальную ширину для изображения */
     height: auto; /* Автоматически сохраняем пропорции изображения */
 }
 
 /* Адаптивный дизайн для мобильных устройств */
-
 @media (max-width: 768px) {
     address {
         flex-direction: column; /* Элементы располагаются в колонку на мобильных */
