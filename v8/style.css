@@ -215,6 +215,7 @@ address img {
     address img {
         max-width: 100%; /* Изображение на всю ширину на мобильных */
         margin-top: 20px; /* Добавляем отступ сверху для изображения */
+        align-items: flex-start; /* Выравнивание по левому краю */
     }
 }
 
@@ -231,6 +232,7 @@ address img {
     .limited-img {
         width: 100%; /* Изображение на всю ширину */
         height: auto;
+        align-items: flex-start; /* Выравнивание по левому краю */
     }
 
     section {
