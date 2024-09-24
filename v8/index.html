@@ -94,13 +94,13 @@
         </ol>
       </section>
         <hr />
+        <footer>
+          <p>Выбрать тему оформления:<br><a href="#" id="light-theme">светлая</a>&nbsp;/&nbsp;<a href="#" id="dark-theme">темная</a></p>
+       </footer>     
         <address>
           <p>Последнее изменение: 20&nbsp;сентября 2024&nbsp;года</p>
           <a href="https://garage.digital/ru/"><img src="images/GD_logo.svg" alt="Программа Музея «Гараж» о&nbsp;новейших технологиях и&nbsp;медиа в&nbsp;искусстве и&nbsp;исследованиях" class="limited-img" /></a>
       </address>
-      <footer>
-        <p>Выбрать тему оформления: <a href="#" id="light-theme">светлая</a> / <a href="#" id="dark-theme">темная</a></p>
-     </footer>     
       </div>
       <script>
         document.getElementById('light-theme').addEventListener('click', function() {
@@ -114,6 +114,7 @@
         });
      
         // Проверяем, если пользователь уже выбирал тему и сохраняем ее
+
         window.onload = function() {
             const savedTheme = localStorage.getItem('theme');
             if (savedTheme === 'dark') {
