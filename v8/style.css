@@ -99,7 +99,7 @@ nav ol li:not(:last-child)::after {
 .two-column-section {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px; /* Расстояние между колонками */
+    gap: 40px; /* Расстояние между колонками */
     align-items: flex-start; /* Выравнивание по верхнему краю */
 }
 
