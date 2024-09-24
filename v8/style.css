@@ -97,18 +97,20 @@ nav ol li:not(:last-child)::after {
 }
 
 .two-column-section {
-    column-count: 2; /* Разбиваем содержимое на 2 колонки */
-    column-gap: 40px; /* Задаем расстояние между колонками */
+    display: flex;
+    justify-content: space-between; /* Распределяем колонки с пробелом между ними */
+    gap: 40px; /* Задаем расстояние между колонками */
+    align-items: flex-start; /* Выравнивание колонок по верхнему краю */
 }
 
-.two-column-section p {
-    break-inside: avoid; /* Предотвращаем разрыв блоков текста между колонками */
+.two-column-section > div {
+    flex: 1; /* Обе колонки занимают одинаковое пространство */
 }
 
 /* Адаптивный дизайн для мобильных устройств */
 @media (max-width: 768px) {
     .two-column-section {
-        column-count: 1; /* Возвращаемся к одной колонке на мобильных */
+        flex-direction: column; /* В одну колонку на мобильных устройствах */
     }
 }
 
