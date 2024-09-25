@@ -210,11 +210,20 @@ address img {
 .divider-img {
     width: auto;
     height: 200px;
+    max-width: 100%;  /* Ограничиваем максимальную ширину до 100% */
 }
 
-/* Разделитель для темной темы */
+/* Темная тема */
 body.dark-theme .divider-img {
     content: url('https://cdn-ec-static.garagemca.org/storage/document/3/2/3250/file-381c864c-aaef-48bd-8218-58eb5fd05e92.png');
+}
+
+/* Адаптивный дизайн для мобильных устройств */
+@media (max-width: 768px) {
+    .divider-img {
+        width: 100%;    /* Занимаем всю ширину экрана */
+        height: auto;   /* Автоматическая высота для сохранения пропорций */
+    }
 }
 
 /* Мобилка */
