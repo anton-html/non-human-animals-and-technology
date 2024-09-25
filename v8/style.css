@@ -206,6 +206,17 @@ address img {
     }
 }
 
+/* Основной стиль для разделителя */
+.divider-img {
+    width: auto;
+    height: 200px;
+}
+
+/* Разделитель для темной темы */
+body.dark-theme .divider-img {
+    content: url('https://cdn-ec-static.garagemca.org/storage/document/3/2/3250/file-381c864c-aaef-48bd-8218-58eb5fd05e92.png');
+}
+
 /* Мобилка */
 @media (max-width: 768px) {
     .container {
