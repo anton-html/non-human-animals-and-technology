@@ -237,11 +237,11 @@ body.dark-theme .divider-3 .divider-img {
 }
 
 body.dark-theme .divider-4 .divider-img {
-    content: url('path/to/image-4-dark.png');
+    content: url('https://cdn-ec-static.garagemca.org/storage/document/3/2/3263/file-4e452114-8470-472f-9678-121a9e3aa71c.png');
 }
 
 body.dark-theme .divider-5 .divider-img {
-    content: url('path/to/image-5-dark.png');
+    content: url('https://cdn-ec-static.garagemca.org/storage/document/3/2/3264/file-fa53cb36-f76c-4fd6-b1fa-1d921f21f1ba.png');
 }
 
 /* Адаптивный дизайн для мобильных устройств */
