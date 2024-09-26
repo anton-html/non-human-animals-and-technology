@@ -244,6 +244,10 @@ body.dark-theme .divider-5 .divider-img {
     content: url('https://cdn-ec-static.garagemca.org/storage/document/3/2/3264/file-fa53cb36-f76c-4fd6-b1fa-1d921f21f1ba.png');
 }
 
+body.dark-theme .divider-5 .divider-img {
+    content: url('https://cdn-ec-static.garagemca.org/storage/document/3/2/3265/file-ae9bafe2-0761-4ecd-bc31-aedf0b51132d.png');
+}
+
 /* Адаптивный дизайн для мобильных устройств */
 @media (max-width: 768px) {
     .divider-img {
