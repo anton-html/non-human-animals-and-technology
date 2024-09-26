@@ -109,54 +109,26 @@ body:not(.dark-theme) nav ol li:last-child {
     display: flex;
     width: 100%;
     overflow-x: hidden;
-    min-height: 150vh; /* Увеличиваем высоту контейнера для прокрутки */
+    position: relative;
 }
 
-.two-column-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start; /* Выравниваем оба столбца по верхнему краю */
-}
-
-.two-column-section > div {
-    width: 48%; /* Устанавливаем ширину для обоих столбцов */
-}
-
-.two-column-section p {
-    margin: 0 0 1em 0; /* Отступы между абзацами */
-}
-
-/* Адаптивный дизайн для мобильных устройств */
-@media (max-width: 768px) {
-    .two-column-section {
-        flex-direction: column; /* Строим столбики в одну колонку на мобильных */
-    }
-
-    .two-column-section > div {
-        width: 100%; /* Полная ширина на мобильных */
-        margin-bottom: 1em; /* Добавляем отступы между секциями */
-    }
-}
-
-.left, .right {
+.left {
     width: 50%;
     padding: 10px;
-    display: flex;
-    flex-direction: column;
-}
-
-.third {
-    padding: 10px;
-    text-align: left;
-}
-
-.limited-img {
-    width: 600px; /* Ограничение ширины изображения */
-    height: auto; /* Сохраняем пропорциональность изображения */
+    overflow-y: scroll; /* Добавляем прокрутку для левой колонки */
+    height: 100vh; /* Ограничиваем высоту левой колонки, чтобы прокручивался только ее контент */
 }
 
 .right {
-    position: relative;
+    width: 50%;
+    padding: 10px;
+    position: fixed; /* Фиксируем правую колонку */
+    top: 0;
+    right: 0;
+    height: 100vh; /* Высота на весь экран */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .right img {
@@ -164,8 +136,6 @@ body:not(.dark-theme) nav ol li:last-child {
     height: auto;
     object-fit: contain;
     background-color: white;
-    position: sticky;
-    top: 0; /* Фиксируем изображение относительно верхнего края */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -193,40 +163,6 @@ address img {
 
 /* Адаптивный дизайн для мобильных устройств */
 @media (max-width: 768px) {
-    address {
-        flex-direction: column; /* Элементы располагаются в колонку на мобильных */
-        align-items: flex-start; /* Выравнивание по левому краю */
-    }
-
-    address img {
-        max-width: 100%; /* Изображение на всю ширину на мобильных */
-        margin-top: 20px; /* Добавляем отступ сверху для изображения */
-        align-items: flex-start; /* Выравнивание по левому краю */
-    }
-}
-
-/* Основной стиль для разделителя */
-.divider-img {
-    width: auto;
-    height: 200px;
-    max-width: 100%;  /* Ограничиваем максимальную ширину до 100% */
-}
-
-/* Темная тема */
-body.dark-theme .divider-img {
-    content: url('https://cdn-ec-static.garagemca.org/storage/document/3/2/3250/file-381c864c-aaef-48bd-8218-58eb5fd05e92.png');
-}
-
-/* Адаптивный дизайн для мобильных устройств */
-@media (max-width: 768px) {
-    .divider-img {
-        width: 100%;    /* Занимаем всю ширину экрана */
-        height: auto;   /* Автоматическая высота для сохранения пропорций */
-    }
-}
-
-/* Мобилка */
-@media (max-width: 768px) {
     .container {
         flex-direction: column-reverse;
     }
@@ -248,6 +184,13 @@ body.dark-theme .divider-img {
 
     section img {
         width: 100%; /* Изображение на всю ширину секции */
+        height: auto;
+    }
+
+    .right {
+        position: relative; /* На мобильных правый блок не фиксируем */
+        top: auto;
+        right: auto;
         height: auto;
     }
 }
