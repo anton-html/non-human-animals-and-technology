@@ -156,6 +156,10 @@ body:not(.dark-theme) nav ol li:last-child {
     height: auto; /* Сохраняем пропорциональность изображения */
 }
 
+.right {
+    position: relative;
+}
+
 .right img {
     max-width: 100%;
     height: auto;
