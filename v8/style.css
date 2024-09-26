@@ -230,6 +230,11 @@ body.dark-theme .divider-img {
     }
 }
 
+/* Выравнивание по центру для изображения-разделителя в контейнере .third */
+.third {
+    text-align: center;  /* Центрируем содержимое в контейнере .third */
+}
+
 /* Мобилка */
 @media (max-width: 768px) {
     .container {
