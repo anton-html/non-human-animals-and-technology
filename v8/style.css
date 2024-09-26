@@ -146,12 +146,6 @@ body:not(.dark-theme) nav ol li:last-child {
     align-items: flex-start;
 }
 
-.right img {
-    max-width: 100%;
-    height: auto;
-    object-fit: contain;
-}
-
 .third {
     padding: 10px;
     text-align: left;
