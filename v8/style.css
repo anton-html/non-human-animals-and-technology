@@ -211,7 +211,7 @@ address img {
 /* Основной стиль для разделителя */
 .divider-img {
     width: auto;
-    height: 200px;
+    height: 100px;
     max-width: 100%;  /* Ограничиваем максимальную ширину до 100% */
 }
 
