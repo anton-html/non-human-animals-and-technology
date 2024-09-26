@@ -214,7 +214,6 @@ address img {
     justify-content: center; /* Центрируем изображение */
     align-items: center;
     width: 100%;
-    padding: 20px 0;
 }
 
 .divider-img {
