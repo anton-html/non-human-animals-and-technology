@@ -1,31 +1,39 @@
 html {
     font-size: 125%;
+    /* Определяем CSS-переменные для цветов */
+    --background-light: white;
+    --background-dark: black;
+    --text-light: black;
+    --text-dark: white;
+    --link-color: #0021F5;
+    --visited-link-color: #551A8B;
+    --breadcrumb-color-light: black;
+    --breadcrumb-color-dark: white;
 }
 
-/* По умолчанию светлая тема */
 body {
-    background-color: white;
-    color: black;
+    background-color: var(--background-light);
+    color: var(--text-light);
 }
 
 /* Темная тема для ручного переключения */
 body.dark-theme {
-    background-color: black;
-    color: white;
+    background-color: var(--background-dark);
+    color: var(--text-dark);
 }
 
 /* Темная тема для устройств с темной схемой */
 @media (prefers-color-scheme: dark) {
     body {
-        background-color: black;
-        color: white;
+        background-color: var(--background-dark);
+        color: var(--text-dark);
     }
 }
 
 /* Светлая тема для ручного переключения */
 body.light-theme {
-    background-color: white;
-    color: black;
+    background-color: var(--background-light);
+    color: var(--text-light);
 }
 
 * {
@@ -51,17 +59,17 @@ h1 {
 
 /* Общие стили для всех ссылок */
 a, .breadcrumb a {
-    color: #0021F5;        /* Цвет ссылок */
+    color: var(--link-color);        /* Цвет ссылок */
     text-decoration: underline; /* Подчеркивание ссылок */
 }
 
 /* Стили для непосещенных и посещенных ссылок */
 a:link {
-    color: #0021F5; /* Цвет для непосещенных ссылок */
+    color: var(--link-color); /* Цвет для непосещенных ссылок */
 }
 
 a:visited {
-    color: #551A8B; /* Цвет для посещенных ссылок (например, фиолетовый) */
+    color: var(--visited-link-color); /* Цвет для посещенных ссылок */
 }
 
 /* Стили для навигации (хлебные крошки) */
@@ -84,25 +92,25 @@ nav ol li:last-child {
 nav ol li:not(:last-child)::after {
     content: " / ";
     padding: 0 5px;
-    color: black; /* Цвет разделителя по умолчанию */
+    color: var(--breadcrumb-color-light); /* Цвет разделителя по умолчанию */
 }
 
 /* Цвет разделителя и текущего элемента для темной темы */
 body.dark-theme nav ol li:not(:last-child)::after {
-    color: white; /* Цвет разделителя для темной темы */
+    color: var(--breadcrumb-color-dark); /* Цвет разделителя для темной темы */
 }
 
 body.dark-theme nav ol li:last-child {
-    color: white; /* Цвет для текущей страницы в темной теме */
+    color: var(--breadcrumb-color-dark); /* Цвет для текущей страницы в темной теме */
 }
 
 /* Цвет разделителя и текущего элемента для светлой темы */
 body:not(.dark-theme) nav ol li:not(:last-child)::after {
-    color: black; /* Цвет разделителя для светлой темы */
+    color: var(--breadcrumb-color-light); /* Цвет разделителя для светлой темы */
 }
 
 body:not(.dark-theme) nav ol li:last-child {
-    color: black; /* Цвет для текущей страницы в светлой теме */
+    color: var(--breadcrumb-color-light); /* Цвет для текущей страницы в светлой теме */
 }
 
 .container {
