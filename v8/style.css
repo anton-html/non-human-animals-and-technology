@@ -208,34 +208,48 @@ address img {
     }
 }
 
-/* Основной стиль для изображения-разделителя */
+/* Общие стили для всех разделителей */
+.divider-section {
+    display: flex;
+    justify-content: center; /* Центрируем изображение */
+    align-items: center;
+    width: 100%;
+    padding: 20px 0;
+}
+
 .divider-img {
     width: auto;
     height: 100px;
-    max-width: 100%;  /* Ограничиваем максимальную ширину до 100% */
+    max-width: 100%;  /* Ограничиваем ширину до 100% */
 }
 
-/* Темная тема */
-body.dark-theme .divider-img {
+/* Разные изображения для тёмной темы */
+body.dark-theme .divider-1 .divider-img {
     content: url('https://cdn-ec-static.garagemca.org/storage/document/3/2/3250/file-381c864c-aaef-48bd-8218-58eb5fd05e92.png');
+}
+
+body.dark-theme .divider-2 .divider-img {
+    content: url('https://cdn-ec-static.garagemca.org/storage/document/3/2/3260/file-9356860c-883f-4bd5-8fb8-6ae5fd1f3b97.png');
+}
+
+body.dark-theme .divider-3 .divider-img {
+    content: url('path/to/image-3-dark.png');
+}
+
+body.dark-theme .divider-4 .divider-img {
+    content: url('path/to/image-4-dark.png');
+}
+
+body.dark-theme .divider-5 .divider-img {
+    content: url('path/to/image-5-dark.png');
 }
 
 /* Адаптивный дизайн для мобильных устройств */
 @media (max-width: 768px) {
     .divider-img {
-        width: 100%;    /* Занимаем всю ширину экрана */
-        height: auto;   /* Автоматическая высота для сохранения пропорций */
+        width: 100%;
+        height: auto;
     }
-}
-
-/* Центрирование содержимого внутри секции */
-.divider-section {
-    display: flex;
-    justify-content: center;  /* Выравнивание по горизонтали */
-    align-items: center;      /* Выравнивание по вертикали */
-    width: 100%;              /* Секция на всю ширину */
-    height: auto;             /* Высота зависит от содержимого */
-    padding: 20px 0;          /* Добавляем отступы сверху и снизу */
 }
 
 /* Мобилка */
