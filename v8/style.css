@@ -2,38 +2,30 @@ html {
     font-size: 125%;
 }
 
-/* Цветовые переменные */
-:root {
-    --text-light: black;
-    --background-light: white;
-    --text-dark: white;
-    --background-dark: black;
-}
-
 /* По умолчанию светлая тема */
 body {
-    background-color: var(--background-light);
-    color: var(--text-light);
+    background-color: white;
+    color: black;
 }
 
 /* Темная тема для ручного переключения */
 body.dark-theme {
-    background-color: var(--background-dark);
-    color: var(--text-dark);
+    background-color: black;
+    color: white;
 }
 
 /* Темная тема для устройств с темной схемой */
 @media (prefers-color-scheme: dark) {
     body {
-        background-color: var(--background-dark);
-        color: var(--text-dark);
+        background-color: black;
+        color: white;
     }
 }
 
 /* Светлая тема для ручного переключения */
 body.light-theme {
-    background-color: var(--background-light);
-    color: var(--text-light);
+    background-color: white;
+    color: black;
 }
 
 * {
@@ -41,37 +33,38 @@ body.light-theme {
 }
 
 h1 {
-    margin-bottom: 0.2em;
+    margin-bottom: 0.2em; /* Отступ после h1 */
 }
 
 .subheading {
-    margin-top: 0;
-    font-size: 1.2em;
-    font-weight: normal;
-    font-style: italic;
-    color: #555;
+    margin-top: 0;        /* Отступ сверху для h3 */
+    font-size: 1.2em;     /* Размер шрифта */
+    font-weight: normal;  /* Жирность */
+    font-style: italic;   /* Курсив */
+    color: #555;          /* Цвет */
 }
 
 .breadcrumb {
-    font-size: 0.875rem;
-    font-style: italic;
+    font-size: 0.875rem;  /* Размер меньше основного текста */
+    font-style: italic;   /* Курсив */
 }
 
 /* Общие стили для всех ссылок */
 a, .breadcrumb a {
-    color: #0021F5;
-    text-decoration: underline;
+    color: #0021F5;        /* Цвет ссылок */
+    text-decoration: underline; /* Подчеркивание ссылок */
 }
 
 /* Стили для непосещенных и посещенных ссылок */
 a:link {
-    color: #0021F5;
+    color: #0021F5; /* Цвет для непосещенных ссылок */
 }
 
 a:visited {
-    color: #551A8B;
+    color: #551A8B; /* Цвет для посещенных ссылок (например, фиолетовый) */
 }
 
+/* Стили для навигации (хлебные крошки) */
 nav ol {
     padding: 0;
     margin: 0;
@@ -82,25 +75,34 @@ nav ol li {
     display: inline;
 }
 
+/* Стили для текущего элемента без ссылки */
 nav ol li:last-child {
-    color: inherit;
+    color: inherit; /* Цвет текущего элемента по умолчанию */
 }
 
+/* Разделитель по умолчанию */
 nav ol li:not(:last-child)::after {
     content: " / ";
     padding: 0 5px;
-    color: black;
+    color: black; /* Цвет разделителя по умолчанию */
 }
 
-/* Цвета для темных и светлых тем */
-body.dark-theme nav ol li:not(:last-child)::after,
+/* Цвет разделителя и текущего элемента для темной темы */
+body.dark-theme nav ol li:not(:last-child)::after {
+    color: white; /* Цвет разделителя для темной темы */
+}
+
 body.dark-theme nav ol li:last-child {
-    color: white;
+    color: white; /* Цвет для текущей страницы в темной теме */
 }
 
-body:not(.dark-theme) nav ol li:not(:last-child)::after,
+/* Цвет разделителя и текущего элемента для светлой темы */
+body:not(.dark-theme) nav ol li:not(:last-child)::after {
+    color: black; /* Цвет разделителя для светлой темы */
+}
+
 body:not(.dark-theme) nav ol li:last-child {
-    color: black;
+    color: black; /* Цвет для текущей страницы в светлой теме */
 }
 
 .container {
@@ -109,30 +111,29 @@ body:not(.dark-theme) nav ol li:last-child {
     overflow-x: hidden;
 }
 
-/* Две колонки */
 .two-column-section {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: flex-start; /* Выравниваем оба столбца по верхнему краю */
 }
 
 .two-column-section > div {
-    width: 48%;
+    width: 48%; /* Устанавливаем ширину для обоих столбцов */
 }
 
 .two-column-section p {
-    margin: 0 0 1em 0;
+    margin: 0 0 1em 0; /* Отступы между абзацами */
 }
 
 /* Адаптивный дизайн для мобильных устройств */
 @media (max-width: 768px) {
     .two-column-section {
-        flex-direction: column;
+        flex-direction: column; /* Строим столбики в одну колонку на мобильных */
     }
 
     .two-column-section > div {
-        width: 100%;
-        margin-bottom: 1em;
+        width: 100%; /* Полная ширина на мобильных */
+        margin-bottom: 1em; /* Добавляем отступы между секциями */
     }
 }
 
@@ -145,28 +146,40 @@ body:not(.dark-theme) nav ol li:last-child {
     align-items: flex-start;
 }
 
-.right img,
-address img,
-.limited-img,
-.divider-img {
+.right img {
     max-width: 100%;
     height: auto;
     object-fit: contain;
-    background-color: white;
+}
+
+.third {
+    padding: 10px;
+    text-align: left;
+}
+
+.limited-img {
+    width: 600px; /* Ограничение ширины изображения */
+    height: auto; /* Сохраняем пропорциональность изображения */
+}
+
+.right img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    background-color: white; /* Светлый фон для изображений в темной теме */
 }
 
 @media (prefers-color-scheme: dark) {
-    .right img,
-    .divider-img {
-        background-color: white;
+    .right img {
+        background-color: white; /* Обеспечивает видимость на темном фоне */
     }
 }
 
 address {
     display: flex;
-    justify-content: space-between;
-    align-items: top;
-    flex-wrap: wrap;
+    justify-content: space-between; /* Размещаем элементы по краям */
+    align-items: top; /* Выравнивание по вертикали по центру */
+    flex-wrap: wrap; /* Разрешаем перенос элементов на новую строку для мобильных */
     margin-top: 20px;
 }
 
@@ -175,10 +188,45 @@ address p {
 }
 
 address img {
-    max-width: 600px;
+    max-width: 600px; /* Задаем максимальную ширину для изображения */
+    height: auto; /* Автоматически сохраняем пропорции изображения */
 }
 
 /* Адаптивный дизайн для мобильных устройств */
+@media (max-width: 768px) {
+    address {
+        flex-direction: column; /* Элементы располагаются в колонку на мобильных */
+        align-items: flex-start; /* Выравнивание по левому краю */
+    }
+
+    address img {
+        max-width: 100%; /* Изображение на всю ширину на мобильных */
+        margin-top: 20px; /* Добавляем отступ сверху для изображения */
+        align-items: flex-start; /* Выравнивание по левому краю */
+    }
+}
+
+/* Основной стиль для разделителя */
+.divider-img {
+    width: auto;
+    height: 200px;
+    max-width: 100%;  /* Ограничиваем максимальную ширину до 100% */
+}
+
+/* Темная тема */
+body.dark-theme .divider-img {
+    content: url('https://cdn-ec-static.garagemca.org/storage/document/3/2/3250/file-381c864c-aaef-48bd-8218-58eb5fd05e92.png');
+}
+
+/* Адаптивный дизайн для мобильных устройств */
+@media (max-width: 768px) {
+    .divider-img {
+        width: 100%;    /* Занимаем всю ширину экрана */
+        height: auto;   /* Автоматическая высота для сохранения пропорций */
+    }
+}
+
+/* Мобилка */
 @media (max-width: 768px) {
     .container {
         flex-direction: column-reverse;
@@ -188,26 +236,27 @@ address img {
         width: 100%;
     }
 
-    address {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    address img,
     .limited-img {
-        max-width: 100%;
-        margin-top: 20px;
+        width: 100%; /* Изображение на всю ширину */
+        height: auto;
+        align-items: flex-start; /* Выравнивание по левому краю */
     }
 
-    .divider-img {
-        width: 100%;
+    section {
+        width: 100%; /* Секция на всю ширину */
+        max-width: none; /* Убираем ограничение ширины */
+    }
+
+    section img {
+        width: 100%; /* Изображение на всю ширину секции */
+        height: auto;
     }
 }
 
 /* Десктоп */
 @media (min-width: 769px) {
     section {
-        max-width: 768px;
+        max-width: 768px; /* Ограничение ширины до 768px */
         width: 100%;
     }
 
