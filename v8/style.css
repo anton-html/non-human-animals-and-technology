@@ -109,6 +109,7 @@ body:not(.dark-theme) nav ol li:last-child {
     display: flex;
     width: 100%;
     overflow-x: hidden;
+    min-height: 150vh; /* Увеличиваем высоту контейнера для прокрутки */
 }
 
 .two-column-section {
@@ -142,8 +143,6 @@ body:not(.dark-theme) nav ol li:last-child {
     padding: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
 }
 
 .third {
@@ -158,7 +157,6 @@ body:not(.dark-theme) nav ol li:last-child {
 
 .right {
     position: relative;
-    min-height: 200vh; /* Увеличиваем высоту для секции с изображением */
 }
 
 .right img {
@@ -167,7 +165,7 @@ body:not(.dark-theme) nav ol li:last-child {
     object-fit: contain;
     background-color: white;
     position: sticky;
-    top: 10px; /* Задаем небольшое расстояние от верха */
+    top: 0; /* Фиксируем изображение относительно верхнего края */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -265,12 +263,4 @@ body.dark-theme .divider-img {
         max-width: 100%;
         height: auto;
     }
-}
-
-.container {
-    min-height: 200vh; /* Увеличиваем высоту контейнера, чтобы появилась прокрутка */
-}
-
-body {
-    padding-bottom: 2000px; /* Временный отступ внизу, чтобы явно увидеть прокрутку */
 }
