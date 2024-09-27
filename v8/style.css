@@ -189,23 +189,6 @@ body:not(.dark-theme) nav ol li:last-child {
     }
 }
 
-address {
-    display: flex;
-    justify-content: space-between; /* Размещаем элементы по краям */
-    align-items: top; /* Выравнивание по вертикали по центру */
-    flex-wrap: wrap; /* Разрешаем перенос элементов на новую строку для мобильных */
-    margin-top: 20px;
-}
-
-address p {
-    margin: 0;
-}
-
-address img {
-    max-width: 600px; /* Задаем максимальную ширину для изображения */
-    height: auto; /* Автоматически сохраняем пропорции изображения */
-}
-
 /* Общие стили для всех разделителей */
 .divider-section {
     display: flex;
@@ -224,6 +207,22 @@ footer {
     margin-top: 1.5em; /* Измените значение в зависимости от нужного отступа */
 }
 
+address {
+    display: flex;
+    justify-content: space-between; /* Размещаем элементы по краям */
+    align-items: top; /* Выравнивание по вертикали по центру */
+    flex-wrap: wrap; /* Разрешаем перенос элементов на новую строку для мобильных */
+    margin-top: 20px;
+}
+
+address p {
+    margin: 0;
+}
+
+address img {
+    max-width: 600px; /* Задаем максимальную ширину для изображения */
+    height: auto; /* Автоматически сохраняем пропорции изображения */
+}
 
 /* Адаптивные изображения для темной и светлой тем */
 body.dark-theme .divider-img {
