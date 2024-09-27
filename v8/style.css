@@ -133,6 +133,10 @@ body:not(.dark-theme) nav ol li:last-child {
     margin: 0 0 1em 0; /* Отступы между абзацами */
 }
 
+.monospace-text {
+    font-family: monospace;
+}
+
 /* Адаптивный дизайн для мобильных устройств */
 @media (max-width: 768px) {
     .two-column-section {
