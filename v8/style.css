@@ -220,6 +220,11 @@ address img {
     max-width: 100%;  /* Ограничиваем ширину до 100% */
 }
 
+footer {
+    margin-top: 1.5em; /* Измените значение в зависимости от нужного отступа */
+}
+
+
 /* Адаптивные изображения для темной и светлой тем */
 body.dark-theme .divider-img {
     content: url('https://cdn-ec-static.garagemca.org/storage/document/3/2/3261/file-3caa528d-a76c-4d11-8d8e-2923fe13446b.png');
