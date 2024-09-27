@@ -1,3 +1,6 @@
+
+/* Это файл стилей до внедрения тем через CSS-переменные, обновленные стилей для изображений-разделителей и адаптивные стили, 27 сентября 2024 года */
+
 html {
     font-size: 125%;
     /* Определяем CSS-переменные для цветов */
@@ -14,19 +17,26 @@ html {
 body {
     background-color: var(--background-light);
     color: var(--text-light);
-    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Темная тема для ручного переключения */
 body.dark-theme {
-    --background-light: black;
-    --text-light: white;
-    --breadcrumb-color-light: white;
+    background-color: var(--background-dark);
+    color: var(--text-dark);
 }
 
+/* Темная тема для устройств с темной схемой */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: var(--background-dark);
+        color: var(--text-dark);
+    }
+}
+
+/* Светлая тема для ручного переключения */
 body.light-theme {
-    --background-light: white;
-    --text-light: black;
-    --breadcrumb-color-light: black;
+    background-color: var(--background-light);
+    color: var(--text-light);
 }
 
 * {
@@ -47,13 +57,18 @@ h1 {
 
 .breadcrumb {
     font-size: 0.875rem;  /* Размер меньше основного текста */
-    font-style: italic;    /* Курсив */
+    font-style: italic;   /* Курсив */
 }
 
 /* Общие стили для всех ссылок */
-a {
-    color: var(--link-color);        /* Цвет для непосещенных ссылок */
-    text-decoration: underline;       /* Подчеркивание ссылок */
+a, .breadcrumb a {
+    color: var(--link-color);        /* Цвет ссылок */
+    text-decoration: underline; /* Подчеркивание ссылок */
+}
+
+/* Стили для непосещенных и посещенных ссылок */
+a:link {
+    color: var(--link-color); /* Цвет для непосещенных ссылок */
 }
 
 a:visited {
@@ -83,6 +98,7 @@ nav ol li:not(:last-child)::after {
     color: var(--breadcrumb-color-light); /* Цвет разделителя по умолчанию */
 }
 
+/* Цвет разделителя и текущего элемента для темной темы */
 body.dark-theme nav ol li:not(:last-child)::after {
     color: var(--breadcrumb-color-dark); /* Цвет разделителя для темной темы */
 }
@@ -122,38 +138,13 @@ body:not(.dark-theme) nav ol li:last-child {
 
 /* Адаптивный дизайн для мобильных устройств */
 @media (max-width: 768px) {
-    .container {
-        flex-direction: column-reverse; /* Строим столбики в одну колонку на мобильных */
+    .two-column-section {
+        flex-direction: column; /* Строим столбики в одну колонку на мобильных */
     }
 
-    .left, .right {
-        width: 100%;
-    }
-
-    .limited-img {
-        width: 100%; /* Изображение на всю ширину */
-        height: auto;
-        align-items: flex-start; /* Выравнивание по левому краю */
-    }
-
-    section {
-        width: 100%; /* Секция на всю ширину */
-        max-width: none; /* Убираем ограничение ширины */
-    }
-
-    section img {
-        width: 100%; /* Изображение на всю ширину секции */
-        height: auto;
-    }
-
-    address {
-        flex-direction: column; /* Элементы располагаются в колонку на мобильных */
-        align-items: flex-start; /* Выравнивание по левому краю */
-    }
-
-    address img {
-        max-width: 100%; /* Изображение на всю ширину на мобильных */
-        margin-top: 20px; /* Добавляем отступ сверху для изображения */
+    .two-column-section > div {
+        width: 100%; /* Полная ширина на мобильных */
+        margin-bottom: 1em; /* Добавляем отступы между секциями */
     }
 }
 
@@ -206,6 +197,20 @@ address img {
     height: auto; /* Автоматически сохраняем пропорции изображения */
 }
 
+/* Адаптивный дизайн для мобильных устройств */
+@media (max-width: 768px) {
+    address {
+        flex-direction: column; /* Элементы располагаются в колонку на мобильных */
+        align-items: flex-start; /* Выравнивание по левому краю */
+    }
+
+    address img {
+        max-width: 100%; /* Изображение на всю ширину на мобильных */
+        margin-top: 20px; /* Добавляем отступ сверху для изображения */
+        align-items: flex-start; /* Выравнивание по левому краю */
+    }
+}
+
 /* Общие стили для всех разделителей */
 .divider-section {
     display: flex;
@@ -220,13 +225,72 @@ address img {
     max-width: 100%;  /* Ограничиваем ширину до 100% */
 }
 
-/* Адаптивные изображения для темной и светлой тем */
-body.dark-theme .divider-img {
+/* Разные изображения для тёмной темы */
+body.dark-theme .divider-1 .divider-img {
+    content: url('https://cdn-ec-static.garagemca.org/storage/document/3/2/3250/file-381c864c-aaef-48bd-8218-58eb5fd05e92.png');
+}
+
+body.dark-theme .divider-2 .divider-img {
+    content: url('https://cdn-ec-static.garagemca.org/storage/document/3/2/3260/file-9356860c-883f-4bd5-8fb8-6ae5fd1f3b97.png');
+}
+
+body.dark-theme .divider-3 .divider-img {
     content: url('https://cdn-ec-static.garagemca.org/storage/document/3/2/3261/file-3caa528d-a76c-4d11-8d8e-2923fe13446b.png');
 }
 
-body.light-theme .divider-img {
-    content: url('https://cdn-ec-static.garagemca.org/storage/document/3/2/3249/file-b7a7d91e-8ed4-4c6f-b0df-217317803ee2.png');
+body.dark-theme .divider-4 .divider-img {
+    content: url('https://cdn-ec-static.garagemca.org/storage/document/3/2/3263/file-4e452114-8470-472f-9678-121a9e3aa71c.png');
+}
+
+body.dark-theme .divider-5 .divider-img {
+    content: url('https://cdn-ec-static.garagemca.org/storage/document/3/2/3264/file-fa53cb36-f76c-4fd6-b1fa-1d921f21f1ba.png');
+}
+
+body.dark-theme .divider-6 .divider-img {
+    content: url('https://cdn-ec-static.garagemca.org/storage/document/3/2/3265/file-ae9bafe2-0761-4ecd-bc31-aedf0b51132d.png');
+}
+
+body.dark-theme .divider-7 .divider-img {
+    content: url('https://cdn-ec-static.garagemca.org/storage/document/3/2/3267/file-f062a9bf-5d72-41a6-b95f-b93a9b3ef81c.png');
+}
+
+body.dark-theme .divider-8 .divider-img {
+    content: url('https://cdn-ec-static.garagemca.org/storage/document/3/2/3268/file-3f88e47e-e320-46bb-9de7-6326b3e38cbb.png');
+}
+
+/* Адаптивный дизайн для мобильных устройств */
+@media (max-width: 768px) {
+    .divider-img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Мобилка */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column-reverse;
+    }
+
+    .left, .right {
+        width: 100%;
+    }
+
+    .limited-img {
+        width: 100%; /* Изображение на всю ширину */
+        height: auto;
+        align-items: flex-start; /* Выравнивание по левому краю */
+    }
+
+    section {
+        width: 100%; /* Секция на всю ширину */
+        max-width: none; /* Убираем ограничение ширины */
+    }
+
+    section img {
+        width: 100%; /* Изображение на всю ширину секции */
+        height: auto;
+    }
 }
 
 /* Десктоп */
