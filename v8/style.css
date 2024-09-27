@@ -178,7 +178,7 @@ body:not(.dark-theme) nav ol li:last-child {
 }
 
 footer {
-    margin-top: 1.5em; /* Отступ соответствует отступу h2 */
+    margin-top: 2em;
 }
 
 address {
