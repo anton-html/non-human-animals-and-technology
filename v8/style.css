@@ -1,5 +1,6 @@
 html {
     font-size: 125%;
+    
     /* Определяем CSS-переменные для цветов */
     --background-light: white;
     --background-dark: black;
@@ -172,13 +173,6 @@ body:not(.dark-theme) nav ol li:last-child {
     max-width: 100%;
     height: auto;
     object-fit: contain;
-    background-color: white; /* Светлый фон для изображений в темной теме */
-}
-
-@media (prefers-color-scheme: dark) {
-    .right img {
-        background-color: white; /* Обеспечивает видимость на темном фоне */
-    }
 }
 
 footer {
