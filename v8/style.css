@@ -43,7 +43,7 @@ body.light-theme {
 
 h1 {
     margin-bottom: 0.2em; /* Отступ после h1 */
-    line-height: 1.1; /* уменьшает межстрочное расстояние */
+    line-height: 1; /* уменьшает межстрочное расстояние */
 }
 
 .subheading {
