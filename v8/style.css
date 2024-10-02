@@ -175,7 +175,7 @@ body.dark-theme #index-cover {
 }
 
 /* Обложка для страницы «Донна Харауэй и теория собаки» в темной теме */
-body.dark-theme #donna-harauej-i-teoriya-sobaki-cover{
+body.dark-theme #donna-harauej-i-teoriya-sobaki-cover {
     content: url("https://cdn-ec-static.garagemca.org/storage/document/3/3/3300/file-4d83372f-71d2-4eb7-bd35-f54aac362f16.gif");
 }
 
