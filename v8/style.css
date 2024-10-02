@@ -184,6 +184,20 @@ body.dark-theme #zhivotnye-i-vojna-cover {
     content: url("https://cdn-ec-static.garagemca.org/storage/document/3/3/3301/file-eac92fc1-da94-4233-8044-5f197e8c8b8c.gif");
 }
 
+/* Обложка для страницы «Межвидовые встречи и политический поворот: от диалогов к делиберации» в темной теме */
+body.dark-theme #mezhvidovye-vstrechi-i-politicheskij-povorot-ot-dialogov-k-deliberacii-cover {
+    content: url("https://cdn-ec-static.garagemca.org/storage/document/3/3/3302/file-f2f103ec-3663-4555-9151-12c5d389391f.gif");
+}
+
+/* Обложка для страницы «Межвидовые встречи и политический поворот: от диалогов к делиберации» в темной теме */
+body.dark-theme #mezhvidovye-vstrechi-i-politicheskij-povorot-ot-dialogov-k-deliberacii-cover {
+    content: url("https://cdn-ec-static.garagemca.org/storage/document/3/3/3302/file-f2f103ec-3663-4555-9151-12c5d389391f.gif");
+}
+
+/* Обложка для страницы «Смотреть можно, есть нельзя» в темной теме */
+body.dark-theme #smotret-mozhno-est-nelzya-cover {
+    content: url("https://cdn-ec-static.garagemca.org/storage/document/3/3/3303/file-cdf0573b-c2e4-4e1e-90da-eb6b79b5ac87.gif");
+}
 
 .right img {
     max-width: 100%;
