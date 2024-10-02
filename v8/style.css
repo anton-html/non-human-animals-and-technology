@@ -194,6 +194,16 @@ body.dark-theme #smotret-mozhno-est-nelzya-cover {
     content: url("https://cdn-ec-static.garagemca.org/storage/document/3/3/3303/file-cdf0573b-c2e4-4e1e-90da-eb6b79b5ac87.gif");
 }
 
+/* Обложка для страницы «Субъектность животных в человеческих конфликтах» в темной теме */
+body.dark-theme #subektnost-zhivotnyh-v-chelovecheskih-konfliktah-cover {
+    content: url("https://cdn-ec-static.garagemca.org/storage/document/3/3/3304/file-e41f85dd-0a1a-4e82-9e26-fb56dc4682b3.gif");
+}
+
+/* Обложка для страницы «Этология как метод исследования животных, или как любить животных» в темной теме */
+body.dark-theme #etologiya-kak-metod-issledovaniya-zhivotnyh-ili-kak-lyubit-zhivotnyh-cover {
+    content: url("https://cdn-ec-static.garagemca.org/storage/document/3/3/3305/file-6b69c33a-3d8e-437d-8d73-7c610b09b6c9.gif");
+}
+
 .right img {
     max-width: 100%;
     height: auto;
