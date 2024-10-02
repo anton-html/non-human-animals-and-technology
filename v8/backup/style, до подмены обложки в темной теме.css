@@ -169,11 +169,6 @@ body:not(.dark-theme) nav ol li:last-child {
     height: auto; /* Сохраняем пропорциональность изображения */
 }
 
-/* Обложка на странице «Введение» в темной теме */
-body.dark-theme #index-cover {
-    content: url("https://cdn-ec-static.garagemca.org/storage/document/3/2/3299/file-8f45c9bc-b683-4086-9759-1045756ffd90.gif");
-}
-
 .right img {
     max-width: 100%;
     height: auto;
