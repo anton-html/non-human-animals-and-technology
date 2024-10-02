@@ -179,6 +179,11 @@ body.dark-theme #donna-harauej-i-teoriya-sobaki-cover {
     content: url("https://cdn-ec-static.garagemca.org/storage/document/3/3/3300/file-4d83372f-71d2-4eb7-bd35-f54aac362f16.gif");
 }
 
+/* Обложка для страницы «Животные и война» в темной теме */
+body.dark-theme #zhivotnye-i-vojna-cover {
+    content: url("https://cdn-ec-static.garagemca.org/storage/document/3/3/3301/file-eac92fc1-da94-4233-8044-5f197e8c8b8c.gif");
+}
+
 
 .right img {
     max-width: 100%;
