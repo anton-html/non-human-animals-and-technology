@@ -169,10 +169,16 @@ body:not(.dark-theme) nav ol li:last-child {
     height: auto; /* Сохраняем пропорциональность изображения */
 }
 
-/* Обложка на странице «Введение» в темной теме */
+/* Обложка для страницы «Введение» в темной теме */
 body.dark-theme #index-cover {
     content: url("https://cdn-ec-static.garagemca.org/storage/document/3/2/3299/file-8f45c9bc-b683-4086-9759-1045756ffd90.gif");
 }
+
+/* Обложка для страницы «Донна Харауэй и теория собаки» в темной теме */
+body.dark-theme #donna-harauej-i-teoriya-sobaki-cover{
+    content: url("https://cdn-ec-static.garagemca.org/storage/document/3/3/3300/file-4d83372f-71d2-4eb7-bd35-f54aac362f16.gif");
+}
+
 
 .right img {
     max-width: 100%;
