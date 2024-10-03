@@ -8,8 +8,19 @@ html {
     --text-dark: white;
     --link-color: #0021F5;
     --visited-link-color: #551A8B;
+    --visited-link-color-dark: #00FF41; /* Зеленый для темной темы */
     --breadcrumb-color-light: black;
     --breadcrumb-color-dark: white;
+}
+
+/* Основные стили для ссылок */
+a:visited {
+    color: var(--visited-link-color); /* По умолчанию для светлой темы */
+}
+
+/* Темная тема для посещенных ссылок */
+body.dark-theme a:visited {
+    color: var(--visited-link-color-dark); /* Зеленый цвет для темной темы */
 }
 
 body {
