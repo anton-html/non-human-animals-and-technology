@@ -265,6 +265,14 @@ address img {
     max-width: 100%;  /* Ограничиваем ширину до 100% */
 }
 
+/* Медиазапрос для мобильных устройств */
+@media (max-width: 768px) {
+    .divider-img {
+        width: 50%; /* Устанавливаем ширину на 50% */
+        height: auto; /* Высота будет автоматически подстраиваться */
+    }
+}
+
 /* Разные изображения для тёмной темы */
 body.dark-theme .divider-1 .divider-img {
     content: url('https://cdn-ec-static.garagemca.org/storage/document/3/2/3260/file-9356860c-883f-4bd5-8fb8-6ae5fd1f3b97.png');
