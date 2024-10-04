@@ -54,6 +54,17 @@ h1 {
     color: #555;          /* Цвет */
 }
 
+@media (prefers-color-scheme: dark) {
+    .subheading {
+        color: #aaa;      /* Светло-серый цвет для темной темы */
+    }
+}
+
+/* Или для ручного переключателя темы */
+body.dark-theme .subheading {
+    color: #aaa;          /* Светло-серый цвет для темной темы */
+}
+
 .breadcrumb {
     font-size: 0.875rem;  /* Размер меньше основного текста */
     font-style: italic;   /* Курсив */
