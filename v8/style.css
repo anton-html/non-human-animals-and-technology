@@ -51,7 +51,7 @@ h1 {
     font-size: 1.2em;     /* Размер шрифта */
     font-weight: normal;  /* Жирность */
     font-style: italic;   /* Курсив */
-    color: #555;          /* Цвет */
+    color: #555;        /* Цвет */
 }
 
 @media (prefers-color-scheme: dark) {
