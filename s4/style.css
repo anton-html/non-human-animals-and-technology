@@ -181,46 +181,6 @@ body:not(.dark-theme) nav ol li:last-child {
     height: auto; /* Сохраняем пропорциональность изображения */
 }
 
-/* Обложка для страницы «Введение» в темной теме */
-body.dark-theme #index-cover {
-    content: url("https://cdn-ec-static.garagemca.org/storage/document/3/2/3299/file-8f45c9bc-b683-4086-9759-1045756ffd90.gif");
-}
-
-/* Обложка для страницы «Донна Харауэй и теория собаки» в темной теме */
-body.dark-theme #donna-harauej-i-teoriya-sobaki-cover {
-    content: url("https://cdn-ec-static.garagemca.org/storage/document/3/3/3318/file-77289c60-d568-44df-9ebf-025cba189c5e.gif");
-}
-
-/* Обложка для страницы «Животные и война» в темной теме */
-body.dark-theme #zhivotnye-i-vojna-cover {
-    content: url("https://cdn-ec-static.garagemca.org/storage/document/3/3/3317/file-849d68d9-c26f-4eb1-814f-fa2df99989ae.gif");
-}
-
-/* Обложка для страницы «Межвидовые встречи и политический поворот: от диалогов к делиберации» в темной теме */
-body.dark-theme #mezhvidovye-vstrechi-i-politicheskij-povorot-ot-dialogov-k-deliberacii-cover {
-    content: url("https://cdn-ec-static.garagemca.org/storage/document/3/3/3319/file-3e3b626d-7f2e-4e38-b868-76958d36a104.gif");
-}
-
-/* Обложка для страницы «Смотреть можно, есть нельзя» в темной теме */
-body.dark-theme #smotret-mozhno-est-nelzya-cover {
-    content: url("https://cdn-ec-static.garagemca.org/storage/document/3/3/3321/file-ffd0793e-4c1f-40c9-b2c9-9c3c5a9fc2f0.gif");
-}
-
-/* Обложка для страницы «Субъектность животных в человеческих конфликтах» в темной теме */
-body.dark-theme #subektnost-zhivotnyh-v-chelovecheskih-konfliktah-cover {
-    content: url("https://cdn-ec-static.garagemca.org/storage/document/3/3/3304/file-e41f85dd-0a1a-4e82-9e26-fb56dc4682b3.gif");
-}
-
-/* Обложка для страницы «Этология как метод исследования животных, или как любить животных» в темной теме */
-body.dark-theme #etologiya-kak-metod-issledovaniya-zhivotnyh-ili-kak-lyubit-zhivotnyh-cover {
-    content: url("https://cdn-ec-static.garagemca.org/storage/document/3/3/3320/file-b4fd87a8-e000-40db-91b2-2bed07df7e41.gif");
-}
-
-/* Обложка для страницы «Исследования животных в научной фантастике» в темной теме */
-body.dark-theme #issledovaniya-zhivotnyh-v-nauchnoj-fantastike-cover {
-    content: url("https://cdn-ec-static.garagemca.org/storage/document/3/3/3315/file-46ded2a6-b550-4c96-87a2-a2cb119ec4b9.gif");
-}
-
 .right img {
     max-width: 100%;
     height: auto;
@@ -282,39 +242,6 @@ address img {
         width: 50%;
         height: auto;
     }
-}
-
-/* Разные изображения для тёмной темы */
-body.dark-theme .divider-1 .divider-img {
-    content: url('https://cdn-ec-static.garagemca.org/storage/document/3/2/3260/file-9356860c-883f-4bd5-8fb8-6ae5fd1f3b97.png');
-}
-
-body.dark-theme .divider-2 .divider-img {
-    content: url('https://cdn-ec-static.garagemca.org/storage/document/3/2/3267/file-f062a9bf-5d72-41a6-b95f-b93a9b3ef81c.png');
-}
-
-body.dark-theme .divider-3 .divider-img {
-    content: url('https://cdn-ec-static.garagemca.org/storage/document/3/2/3264/file-fa53cb36-f76c-4fd6-b1fa-1d921f21f1ba.png');
-}
-
-body.dark-theme .divider-4 .divider-img {
-    content: url('https://cdn-ec-static.garagemca.org/storage/document/3/2/3272/file-7b107e24-cbd9-4a9b-af07-3b473f2b539f.png');
-}
-
-body.dark-theme .divider-5 .divider-img {
-    content: url('https://cdn-ec-static.garagemca.org/storage/document/3/2/3275/file-fd88fd3e-9ead-4c2b-b9a0-075edda9a2d2.png');
-}
-
-body.dark-theme .divider-6 .divider-img {
-    content: url('https://cdn-ec-static.garagemca.org/storage/document/3/2/3277/file-80baa1fc-5c8a-4cd2-91a1-2e8c59170bb1.png');
-}
-
-body.dark-theme .divider-7 .divider-img {
-    content: url('https://cdn-ec-static.garagemca.org/storage/document/3/2/3263/file-4e452114-8470-472f-9678-121a9e3aa71c.png');
-}
-
-body.dark-theme .divider-8 .divider-img {
-    content: url('https://cdn-ec-static.garagemca.org/storage/document/3/2/3273/file-d87e351e-6be4-466a-8406-fc7f21c4591b.png');
 }
 
 /* Мобилка */
