@@ -1,11 +1,11 @@
 :root {
     --background-light: white;
-    --background-dark: #1A1A1A; /* Обновленный цвет фона для темной темы */
-    --text-light: black;
+    --background-dark: #1A1A1A;
+    --text-light: #1A1A1A;
     --text-dark: white;
     --link-color: #0021F5;
     --visited-link-color: #551A8B;
-    --breadcrumb-color-light: black;
+    --breadcrumb-color-light: #1A1A1A;
     --breadcrumb-color-dark: white;
 }
 
