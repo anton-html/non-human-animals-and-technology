@@ -98,7 +98,7 @@ nav ol li:last-child {
 .container, .address {
     display: flex;
     width: 100%;
-    padding: 10px 20px; /* Боковые отступы 20px */
+    padding: 10px; /* Боковые отступы 10px */
     justify-content: space-between;
 }
 
@@ -138,7 +138,6 @@ address {
     align-items: top;
     flex-wrap: wrap;
     margin-top: 20px;
-    padding: 10px 20px; /* Боковые отступы 20px */
 }
 
 address p {
@@ -155,7 +154,6 @@ address img {
     .container, .address {
         flex-direction: column-reverse;
         align-items: flex-start;
-        padding: 10px 20px; /* Боковые отступы такие же, как на десктопе */
     }
 
     .left, .right, .limited-img {
@@ -180,7 +178,6 @@ address img {
     address {
         flex-direction: column;
         align-items: flex-start;
-        padding: 10px 20px; /* Боковые отступы 20px */
     }
 
     address img {
@@ -203,7 +200,7 @@ address img {
     }
 
     .left, .right {
-        width: 50%;
+        width: 50%; /* По 50% ширины */
     }
 }
 
