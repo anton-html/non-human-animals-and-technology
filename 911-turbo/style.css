@@ -172,6 +172,27 @@ nav ol li:last-child {
     }
 }
 
+.container {
+    display: flex;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.left, .right {
+    width: 50%; /* Убедитесь, что ширина равная для обоих блоков */
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.right img {
+    max-width: 100%; /* Убедитесь, что изображение адаптивно */
+    height: auto;
+    object-fit: contain; /* Убедитесь, что изображение не искажено */
+}
+
 /* Десктоп */
 @media (min-width: 769px) {
     section {
@@ -182,6 +203,10 @@ nav ol li:last-child {
     section img {
         max-width: 100%;
         height: auto;
+    }
+
+    .left, .right {
+            width: 50%; /* Убедитесь, что оба блока занимают по 50% */
     }
 }
 
@@ -270,7 +295,6 @@ body.dark-theme #issledovaniya-zhivotnyh-v-nauchnoj-fantastike-cover {
     height: auto;
     object-fit: contain;
 }
-
 
 footer {
     margin-top: 2em;
