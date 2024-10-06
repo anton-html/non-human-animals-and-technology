@@ -7,8 +7,6 @@
     --visited-link-color: #551A8B;
     --breadcrumb-color-light: black;
     --breadcrumb-color-dark: white;
-    --subheading-light: #555;
-    --subheading-dark: #aaa;
 }
 
 html {
@@ -26,13 +24,17 @@ body.dark-theme {
     color: var(--text-dark);
 }
 
-/* Стили для подзаголовков */
+/* Изначальные настройки для подзаголовков */
 .subheading {
-    color: var(--subheading-light);
+    margin-top: 0;
+    font-size: 1.2em;
+    font-weight: normal;
+    font-style: italic;
+    color: #555; /* Цвет для светлой темы */
 }
 
 body.dark-theme .subheading {
-    color: var(--subheading-dark);
+    color: #aaa; /* Цвет для темной темы */
 }
 
 /* Стили для хлебных крошек */
@@ -215,7 +217,6 @@ address img {
     height: 100px;
     max-width: 100%;
 }
-
 
 /* Разные изображения для тёмной темы */
 body.dark-theme .divider-1 .divider-img {
