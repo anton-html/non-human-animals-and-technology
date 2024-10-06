@@ -206,7 +206,7 @@ nav ol li:last-child {
     }
 
     .left, .right {
-            width: 50%; /* Убедитесь, что оба блока занимают по 50% */
+            width: 50%;
     }
 }
 
@@ -315,6 +315,11 @@ address p {
 address img {
     max-width: 600px;
     height: auto;
+}
+
+.third {
+    padding: 10px 20px; /* Верхний/нижний отступ 10px, боковой отступ 20px */
+    text-align: left;
 }
 
 /* Адаптивный дизайн для мобильных устройств */
