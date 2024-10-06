@@ -1,6 +1,6 @@
 :root {
     --background-light: white;
-    --background-dark: black;
+    --background-dark: #1A1A1A; /* Обновленный цвет фона для темной темы */
     --text-light: black;
     --text-dark: white;
     --link-color: #0021F5;
