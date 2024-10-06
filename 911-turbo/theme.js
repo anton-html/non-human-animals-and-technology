@@ -3,10 +3,10 @@ function setTheme(theme) {
     document.body.classList.remove('dark-theme', 'light-theme');
     document.body.classList.add(theme);
     localStorage.setItem('theme', theme); // Сохраняем выбор пользователя
-    updateThemeLinks(theme); // Обновляем видимость ссылок
+    updateThemeLinks(theme); // Обновляем видимость ссылок и текст переключателя
 }
 
-// Функция для обновления отображения ссылок
+// Функция для обновления текста переключателя
 function updateThemeLinks(currentTheme) {
     const darkThemeLink = document.getElementById('dark-theme');
     const lightThemeLink = document.getElementById('light-theme');
