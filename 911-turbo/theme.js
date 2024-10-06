@@ -3,10 +3,10 @@ function setTheme(theme) {
     document.body.classList.remove('dark-theme', 'light-theme');
     document.body.classList.add(theme);
     localStorage.setItem('theme', theme); // Сохраняем выбор пользователя
-    updateThemeLinks(theme); // Обновляем видимость ссылок и текст переключателя
+    updateThemeLinks(theme);
 }
 
-// Функция для обновления текста переключателя
+// Функция для обновления отображения ссылок
 function updateThemeLinks(currentTheme) {
     const darkThemeLink = document.getElementById('dark-theme');
     const lightThemeLink = document.getElementById('light-theme');
@@ -25,9 +25,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const savedTheme = localStorage.getItem('theme');
     
     if (savedTheme) {
-        setTheme(savedTheme); // Устанавливаем сохраненную тему
+        setTheme(savedTheme);
     } else {
-        // Если темы нет, проверяем системные настройки
         const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
         setTheme(prefersDarkScheme ? 'dark-theme' : 'light-theme');
     }
