@@ -162,26 +162,23 @@ body:not(.dark-theme) nav ol li:last-child {
     }
 }
 
-.logo-animation-wrapper {
+.left, .right {
+    width: 50%;
+    padding: 10px;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 100%; /* Ограничиваем ширину контейнера, чтобы избежать горизонтального скролла */
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
-.logo-animation-wrapper .logo-img,
-.logo-animation-wrapper .animation-img {
-    max-height: 100px; /* Ограничиваем максимальную высоту */
-    max-width: 100%; /* Ширина не больше контейнера */
-    object-fit: contain; /* Сохраняем пропорции изображений внутри контейнера */
+.third {
+    padding: 10px;
+    text-align: left;
 }
 
-@media (max-width: 768px) {
-    .logo-animation-wrapper .logo-img,
-    .logo-animation-wrapper .animation-img {
-        max-height: 80px; /* Уменьшаем размер изображений на мобильных */
-        width: auto;
-    }
+.limited-img {
+    width: 600px;
+    height: auto;
 }
 
 /* Обложка для страницы «Введение» в темной теме */
