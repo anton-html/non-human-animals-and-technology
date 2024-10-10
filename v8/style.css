@@ -181,19 +181,23 @@ body:not(.dark-theme) nav ol li:last-child {
     height: auto;
 }
 
-/* Логотип для светлой темы */
-.logo-dark {
-    display: none;
+/* Логотип для светлой темы отображается по умолчанию */
+.logo-light {
+    display: block;
   }
   
-  /* Логотип для темной темы */
+  /* Для темной темы */
   @media (prefers-color-scheme: dark) {
     .logo-light {
       display: none;
     }
   
-    .logo-dark {
-      display: inline;
+    a[href="https://garage.digital/ru/"]::before {
+      content: '';
+      display: block;
+      background-image: url('images/BLACK.gif');
+      background-size: contain;
+      background-repeat: no-repeat;
     }
   }  
 
