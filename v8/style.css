@@ -286,25 +286,33 @@ address img {
 
 .logo-animation-wrapper {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    align-items: center; /* Выравнивание по вертикали */
 }
 
 .logo-animation-wrapper img {
-    width: 100%; /* Ширина изображения и анимации автоматически адаптируется */
-    max-width: 600px; /* Максимальная ширина для десктопов */
     height: auto;
+    max-width: 100%; /* Изображения автоматически адаптируются */
+}
+
+.logo-animation-wrapper .animation-img {
+    height: 100%; /* Высота анимации привязывается к высоте логотипа */
+    width: auto; /* Ширина будет пропорциональна высоте */
 }
 
 @media (max-width: 768px) {
     .logo-animation-wrapper {
-        flex-direction: row; /* Рядом друг с другом в одну строку */
-        justify-content: space-between; /* Равномерное распределение */
-        width: 100%; /* Заполняем всю ширину экрана */
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%; /* Заполняет всю ширину экрана */
     }
 
     .logo-animation-wrapper img {
-        width: 48%; /* Каждое изображение занимает 48% ширины экрана */
+        width: 48%; /* Каждое изображение занимает по 48% */
+        height: auto; /* Автоматическая подгонка высоты на мобильных устройствах */
+    }
+
+    .logo-animation-wrapper .animation-img {
+        height: auto; /* Высота анимации сохраняется пропорционально */
     }
 }
 
