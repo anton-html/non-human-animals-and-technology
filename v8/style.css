@@ -286,35 +286,40 @@ address img {
 
 .logo-animation-wrapper {
     display: flex;
-    align-items: center; /* Выравнивание по вертикали */
+    align-items: center; /* Центрируем элементы по вертикали */
 }
 
 .logo-animation-wrapper img {
+    max-width: 100%; /* Изображения адаптируются к контейнеру */
     height: auto;
-    max-width: 100%; /* Изображения автоматически адаптируются */
+}
+
+.logo-animation-wrapper .logo-img {
+    max-height: 100%; /* Устанавливаем максимальную высоту для логотипа */
 }
 
 .logo-animation-wrapper .animation-img {
-    height: 100%; /* Высота анимации привязывается к высоте логотипа */
-    width: auto; /* Ширина будет пропорциональна высоте */
+    height: auto;
+    max-height: 100%; /* Высота анимации привязывается к высоте логотипа */
 }
 
 @media (max-width: 768px) {
     .logo-animation-wrapper {
         flex-direction: row;
         justify-content: space-between;
-        width: 100%; /* Заполняет всю ширину экрана */
+        width: 100%; /* Обе картинки занимают всю ширину */
     }
 
     .logo-animation-wrapper img {
-        width: 48%; /* Каждое изображение занимает по 48% */
-        height: auto; /* Автоматическая подгонка высоты на мобильных устройствах */
+        width: 48%; /* Каждое изображение занимает по 48% ширины */
+        height: auto;
     }
 
     .logo-animation-wrapper .animation-img {
-        height: auto; /* Высота анимации сохраняется пропорционально */
+        max-height: 100%; /* Высота анимации сохраняется пропорциональной логотипу */
     }
 }
+
 
 /* Разные изображения для тёмной темы */
 body.dark-theme .divider-1 .divider-img {
