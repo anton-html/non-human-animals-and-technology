@@ -284,6 +284,30 @@ address img {
     }
 }
 
+.logo-animation-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-animation-wrapper img {
+    width: 100%; /* Ширина изображения и анимации автоматически адаптируется */
+    max-width: 600px; /* Максимальная ширина для десктопов */
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .logo-animation-wrapper {
+        flex-direction: row; /* Рядом друг с другом в одну строку */
+        justify-content: space-between; /* Равномерное распределение */
+        width: 100%; /* Заполняем всю ширину экрана */
+    }
+
+    .logo-animation-wrapper img {
+        width: 48%; /* Каждое изображение занимает 48% ширины экрана */
+    }
+}
+
 /* Разные изображения для тёмной темы */
 body.dark-theme .divider-1 .divider-img {
     content: url('https://cdn-ec-static.garagemca.org/storage/document/3/2/3260/file-9356860c-883f-4bd5-8fb8-6ae5fd1f3b97.png');
