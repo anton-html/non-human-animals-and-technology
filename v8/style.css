@@ -211,10 +211,15 @@ body.dark-theme .logo-dark {
     display: block;
 }
 
-/* Явное скрытие логотипа для темной темы в светлой */
-body:not(.dark-theme) .logo-dark {
+/* Для ручного переключения на светлую тему */
+body.light-theme .logo-light {
+    display: block;
+}
+
+body.light-theme .logo-dark {
     display: none;
 }
+
 
 /* Обложка для страницы «Введение» в темной теме */
 body.dark-theme #index-cover {
