@@ -289,37 +289,29 @@ address img {
     align-items: center; /* Центрируем элементы по вертикали */
 }
 
-.logo-animation-wrapper img {
-    max-width: 100%; /* Изображения адаптируются к контейнеру */
-    height: auto;
-}
-
 .logo-animation-wrapper .logo-img {
-    max-height: 100%; /* Устанавливаем максимальную высоту для логотипа */
+    width: 300px; /* Фиксируем ширину логотипа */
+    height: auto; /* Сохраняем пропорции логотипа */
 }
 
 .logo-animation-wrapper .animation-img {
-    height: auto;
-    max-height: 100%; /* Высота анимации привязывается к высоте логотипа */
+    width: auto;
+    height: 100%; /* Высота анимации будет равна высоте логотипа */
 }
 
 @media (max-width: 768px) {
     .logo-animation-wrapper {
         flex-direction: row;
         justify-content: space-between;
-        width: 100%; /* Обе картинки занимают всю ширину */
+        width: 100%; /* Логотип и анимация занимают всю ширину */
     }
 
-    .logo-animation-wrapper img {
-        width: 48%; /* Каждое изображение занимает по 48% ширины */
-        height: auto;
-    }
-
+    .logo-animation-wrapper .logo-img,
     .logo-animation-wrapper .animation-img {
-        max-height: 100%; /* Высота анимации сохраняется пропорциональной логотипу */
+        width: 48%; /* Каждое изображение занимает 48% ширины экрана */
+        height: auto; /* Поддерживаем пропорциональность */
     }
 }
-
 
 /* Разные изображения для тёмной темы */
 body.dark-theme .divider-1 .divider-img {
