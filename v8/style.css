@@ -53,9 +53,8 @@ body.dark-theme #logo {
 
 /* Логотип для светлой темы при ручном переключении */
 body.light-theme #logo {
-    content: url("images/light-theme-logo.gif"); /* Пример пути для светлой темы */
+    content: url("images/W.gif");
 }
-
 
 * {
     box-sizing: border-box;
