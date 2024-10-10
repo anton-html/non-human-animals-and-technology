@@ -37,6 +37,20 @@ body.light-theme {
     color: var(--text-light);
 }
 
+/* Логотип для светлой темы (по умолчанию в HTML) */
+
+/* Логотип для темной темы через класс */
+body.dark-theme #logo {
+    content: url("images/W-dark.gif");
+}
+
+/* Медиа-запрос для устройств с темной темой */
+@media (prefers-color-scheme: dark) {
+    body:not(.dark-theme) #logo {
+        content: url("images/B.gif");
+    }
+}
+
 * {
     box-sizing: border-box;
 }
@@ -179,20 +193,6 @@ body:not(.dark-theme) nav ol li:last-child {
 .limited-img {
     width: 600px;
     height: auto;
-}
-
-/* Логотип для светлой темы (по умолчанию в HTML) */
-
-/* Логотип для темной темы */
-body.dark-theme #logo {
-    content: url("images/B.gif");
-}
-
-/* Альтернативная версия для устройств с темной схемой */
-@media (prefers-color-scheme: dark) {
-    #logo {
-        content: url("images/B.gif");
-    }
 }
 
 /* Обложка для страницы «Введение» в темной теме */
