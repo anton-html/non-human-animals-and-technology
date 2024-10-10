@@ -41,7 +41,7 @@ body.light-theme {
 
 /* Логотип для темной темы через класс .dark-theme */
 body.dark-theme #logo {
-    content: url("images/В.gif");
+    content: url("images/B.gif");
 }
 
 /* Медиа-запрос для устройств с темной темой, если нет ручного переключения */
