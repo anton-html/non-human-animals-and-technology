@@ -286,30 +286,26 @@ address img {
 
 .logo-animation-wrapper {
     display: flex;
-    align-items: center; /* Центрируем элементы по вертикали */
+    align-items: center;
 }
 
-.logo-animation-wrapper .logo-img {
-    width: 300px; /* Фиксируем ширину логотипа */
-    height: auto; /* Сохраняем пропорции логотипа */
-}
-
+.logo-animation-wrapper .logo-img, 
 .logo-animation-wrapper .animation-img {
-    width: auto;
-    height: 100%; /* Высота анимации будет равна высоте логотипа */
+    height: 100px; /* Фиксируем одинаковую высоту для обоих изображений */
+    width: auto; /* Сохраняем пропорции */
 }
 
 @media (max-width: 768px) {
     .logo-animation-wrapper {
         flex-direction: row;
         justify-content: space-between;
-        width: 100%; /* Логотип и анимация занимают всю ширину */
+        width: 100%;
     }
 
     .logo-animation-wrapper .logo-img,
     .logo-animation-wrapper .animation-img {
-        width: 48%; /* Каждое изображение занимает 48% ширины экрана */
-        height: auto; /* Поддерживаем пропорциональность */
+        height: 80px; /* Уменьшаем высоту на мобильных устройствах */
+        width: auto;
     }
 }
 
