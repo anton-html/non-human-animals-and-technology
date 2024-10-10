@@ -184,22 +184,26 @@ body:not(.dark-theme) nav ol li:last-child {
 /* Логотип для светлой темы отображается по умолчанию */
 .logo-light {
     display: block;
-  }
-  
-  /* Для темной темы */
-  @media (prefers-color-scheme: dark) {
+    max-width: 600px; /* Ограничиваем максимальную ширину */
+    height: auto; /* Пропорциональное изменение высоты */
+}
+
+/* Для темной темы */
+@media (prefers-color-scheme: dark) {
     .logo-light {
-      display: none;
+        display: none;
     }
-  
-    a[href="https://garage.digital/ru/"]::before {
-      content: '';
-      display: block;
-      background-image: url('images/BLACK.gif');
-      background-size: contain;
-      background-repeat: no-repeat;
+
+    .logo-link::before {
+        content: '';
+        display: block;
+        width: 100%; /* Занимает всю ширину контейнера */
+        height: 100%; /* Высота автоматически подстраивается под ширину */
+        background-image: url('images/BLACK.gif');
+        background-size: contain; /* Изображение полностью вмещается */
+        background-repeat: no-repeat;
     }
-  }  
+}
 
 /* Обложка для страницы «Введение» в темной теме */
 body.dark-theme #index-cover {
