@@ -181,46 +181,6 @@ body:not(.dark-theme) nav ol li:last-child {
     height: auto;
 }
 
-/* Логотип для светлой темы отображается по умолчанию */
-.logo-light {
-    display: block;
-}
-
-/* Логотип для темной темы скрыт по умолчанию */
-.logo-dark {
-    display: none;
-}
-
-/* Для устройств с темной темой (предпочтения) */
-@media (prefers-color-scheme: dark) {
-    .logo-light {
-        display: none;
-    }
-
-    .logo-dark {
-        display: block;
-    }
-}
-
-/* Для ручного переключения на темную тему */
-body.dark-theme .logo-light {
-    display: none;
-}
-
-body.dark-theme .logo-dark {
-    display: block;
-}
-
-/* Для ручного переключения на светлую тему */
-body.light-theme .logo-light {
-    display: block;
-}
-
-body.light-theme .logo-dark {
-    display: none;
-}
-
-
 /* Обложка для страницы «Введение» в темной теме */
 body.dark-theme #index-cover {
     content: url("https://cdn-ec-static.garagemca.org/storage/document/3/2/3299/file-8f45c9bc-b683-4086-9759-1045756ffd90.gif");
